@@ -27,19 +27,25 @@ function App() {
 
   return (
     <div
-      className={`App  ${
+      className={`App m-0  ${
         !light ? "text-gray-800" : "bg-gray-800 text-white"
-      } w-full md:flex flex-col items-center justify-center relative`}
+      } w-full md:flex flex-col items-center relative `}
     >
       <div
-        className={`w-full flex items-center px-4 py-2 shadow  md:text-base text-xs   bg-${
+        className={`w-full h-10 flex items-center  border-1 border-b border-gray-${
+          !light ? "300" : "700"
+        }   m-auto md:text-base text-xs   bg-${
           !light ? "white" : "gray-800"
         } } fixed top-0 z-[999]`}
       >
-        <div className="basis-1/4 items-start  ">
-          <FaSun className="text-[24px]" onClick={() => setLight(!light)} />
+        <div className="basis-1/4 px-4 text-[20px]">
+          {light ? (
+            <FaSun onClick={() => setLight(!light)} />
+          ) : (
+            <FaMoon onClick={() => setLight(!light)} />
+          )}
         </div>
-        <div className=" basis-3/4">
+        <div className="basis-3/4 px-4  ">
           <Nav mode={light} />
         </div>
       </div>

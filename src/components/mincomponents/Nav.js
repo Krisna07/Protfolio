@@ -15,7 +15,9 @@ const Nav = (mode) => {
     "hover:after:content-['']  after:w-0 hover:after:w-full   hover:after:border-solid hover:after:border-b-2 hover:after:border-red-300 block text-sm font-medium hover:text-slate-300 after:absolute after:left-0 after:bottom-0 hover:after:ease-in  after:ease-out hover:after:transition-all hover:after:duration-150 ";
   return (
     <BrowserRouter>
-      <nav className={`w-full text-right flex  justify-between m-auto`}>
+      <nav
+        className={`w-full text-right flex  justify-between m-auto absoulte top-0 `}
+      >
         <div className="items-start"></div>
         <div className="md:flex items-end   hidden    ">
           {tabs.map((tab, count) => (
@@ -35,8 +37,8 @@ const Nav = (mode) => {
             </div>
           ))}
         </div>
-        <div className="w-8 items-end md:hidden block">
-          <MobileNav menuHover={menuHover} />
+        <div className="w-8  items-end md:hidden block ">
+          <MobileNav menuHover={menuHover} theme={mode.mode} />
         </div>
       </nav>
 
