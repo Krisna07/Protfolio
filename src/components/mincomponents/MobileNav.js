@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 
-const MobileNav = ({ menuHover, theme }) => {
+const MobileNav = ({ menuHover, theme, tabs, saveFile }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const rotateTopBar = "transform rotate-[-135deg] absolute";
@@ -41,7 +41,7 @@ const MobileNav = ({ menuHover, theme }) => {
 
       <div
         className={`w-screen h-screen  transition-all ease-in duration-300 
-           absolute top-10  ${
+           absolute top-10 z-40  ${
              openMenu
                ? " right-[0] backdrop-filter backdrop-blur-sm"
                : "right-[-100%]"
@@ -52,40 +52,30 @@ const MobileNav = ({ menuHover, theme }) => {
             openMenu ? "w-3/4 right-0 " : "w-3/4 right-[-100%] "
           } ${
             !theme ? "bg-gray-300 text-black" : "bg-gray-800 text-white"
-          } flex flex-col p-20 items-center justify-between list-none`}
+          } flex flex-col p-20 items-center justify-between  list-none`}
         >
-          <Link to="#about" smooth onClick={() => setOpenMenu(!openMenu)}>
-            <li className={`p-2 mx-4  w-[content] font-bold relative `}>
-              <span
-                className={`${menuHover} hover:text-red-400 flex items-center`}
-              >
-                <span className="hover:text-red-400 mx-2 ">0.1</span> About
-              </span>
-            </li>
-          </Link>
-          <Link to="#projects" smooth onClick={() => setOpenMenu(!openMenu)}>
-            <li
-              className={`p-2 mx-4 w-[content] font-bold relative  flex items-center`}
+          {tabs.map((tab, count) => (
+            <div
+              key={tab}
+              className={`p-2 ${menuHover} w-content font-bold relative`}
             >
-              <span
-                className={`${menuHover} hover:text-red-400 flex items-center   `}
+              <Link
+                to={`#${tab.toLowerCase()}`}
+                smooth
+                onClick={() => setOpenMenu(!openMenu)}
               >
-                <span className="hover:text-red-400 mx-2">0.2</span> Projects
-              </span>
-            </li>
-          </Link>
+                <div className={`w-[content] hover:text-red-400 text-left`}>
+                  <span className="text-red-400 mr-2 ">0.{count + 1}</span>
+                  <span> {tab}</span>
+                </div>
+              </Link>
+            </div>
+          ))}
+
           <li
-            className={`p-2 mx-4  w-[content] flex items-center font-bold relative `}
+            className={` mx-4  w-content font-bold text-sm relative `}
+            onClick={saveFile}
           >
-            <Link to="#contact" smooth onClick={() => setOpenMenu(!openMenu)}>
-              <span
-                className={`${menuHover} hover:text-red-400 flex items-center `}
-              >
-                <span className="hover:text-red-400 mx-2">0.3</span> Contact
-              </span>
-            </Link>
-          </li>
-          <li className={` mx-4  w-content font-bold text-sm relative `}>
             <button className="p-1 border-2  flex items-center justify-center border-red-500 border-solid rounded hover:text-red-400">
               Resume
             </button>

@@ -23,11 +23,8 @@ const Greetings = (theme) => {
   }, []);
 
   return (
-    <div
-      className="h-screen flex flex-col items-start justify-center relative  relative "
-      id="top"
-    >
-      <div className=" z-0">
+    <div className=" flex flex-col items-start justify-center relative  relative ">
+      <div className="z-0 flex flex-col items-center justify-center">
         <div className="p-4  font-mono text-l w-full overflow-hidden md:text-xl ">
           <div className="m-2 text-red-400" ref={heading}>
             Hi, I am
@@ -44,8 +41,8 @@ const Greetings = (theme) => {
             <span
               className={`cursor ${
                 !theme.theme
-                  ? "bg-white border-gray-900 border-l-4 border-solid "
-                  : "bg-gray-800 border-white border-l-4 border-solid  "
+                  ? "bg-white border-black border-l-4 border-solid "
+                  : "bg-black border-white border-l-4 border-solid  "
               } `}
             ></span>
           </div>

@@ -1,12 +1,12 @@
 import React from "react";
 import {
-  FaPlane,
   FaGraduationCap,
   FaList,
   FaUserGraduate,
   FaBookReader,
   FaRegHeart,
   FaBuilding,
+  FaCalendar,
 } from "react-icons/fa";
 
 const Timeline = (theme) => {
@@ -21,16 +21,6 @@ const Timeline = (theme) => {
       uni: "Victoria University",
       course: "Bachelors in Information Technology",
     },
-    // {
-    //   date: "2018",
-    //   uni: "Australian Institute of Business and Technology",
-    //   course: "Dimploma/Advance Diploma of Information Technology",
-    // },
-    // {
-    //   date: "2020",
-    //   uni: "Victoria University",
-    //   course: "Bachelors in Information Technology",
-    // },
   ];
 
   return (
@@ -46,12 +36,12 @@ const Timeline = (theme) => {
               className="p-2 w-full md:w-1/2   realtive "
             >
               <div
-                className={`title-font text-sm  w-full flex  shadow rounded  hover:shadow-xl md:flex-row items-center timeline  ${
+                className={`title-font text-sm  w-full flex  shadow rounded  hover:shadow-xl md:flex-row flex-col items-center timeline  ${
                   !theme.theme ? "bg-white" : "bg-gray-900"
-                } p-2 rounded border-t-2 md:border-t-0 border-red-500 `}
+                } p-2 rounded md:border-t-2 md:border-t-0 border-red-500 `}
               >
-                <div className=" text-sm relative flex items-center date md:border-r-2 border-red-500 -rotate-90 ">
-                  <FaPlane className="text-red-400  flex-wrap p-0 m-2" />
+                <div className=" text-sm relative flex items-center date border-b-2 border-red-500 md:-rotate-90 ">
+                  <FaCalendar className="text-red-400  flex-wrap p-0 m-2" />
                   <span className="p-2  ">{timeline.date}</span>
                 </div>
                 <div className="p-4 desc ">

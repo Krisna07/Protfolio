@@ -1,19 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&family=Noto+Serif&family=Odibee+Sans&family=Roboto:wght@300&display=swap");
 
 body {
   margin: 0 auto;
   padding: 0%;
-  font-family: "Archivo", sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   scroll-behavior: smooth;
-  /* cursor: url(./images/cursor.png) 20 20, auto; */
+  cursor: url(./components/images/cursor.png), auto;
 }
 a {
-  /* cursor: url(./images/cursor.png) 15 15, auto; */
+  cursor: url(./components/images/cursor.png), auto;
 }
 
 code {
@@ -29,9 +30,7 @@ code {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-/* .will-change-transform {
-  will-change: transform;
-} */
+
 .cursor {
   width: 90%;
   height: 80%;
@@ -41,6 +40,9 @@ code {
   animation: type 4s ease-out 0.8s infinite alternate both;
 
   /* will-change: opacity; */
+}
+.appshadow {
+  border-bottom: 1px solid rgba(143, 143, 143, 0.295);
 }
 
 @keyframes cursor {
