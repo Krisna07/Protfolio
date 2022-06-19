@@ -40,11 +40,11 @@ const MobileNav = ({ menuHover, theme, tabs, saveFile }) => {
       </div>
 
       <div
-        className={`w-screen h-screen  transition-all ease-in duration-300 
-           absolute top-10 z-40  ${
+        className={` transition-right ease-in duration-300 
+           fixed top-10 z-40  ${
              openMenu
-               ? " right-[0] backdrop-filter backdrop-blur-sm"
-               : "right-[-100%]"
+               ? "w-screen h-screen  right-[0] backdrop-filter backdrop-blur-sm"
+               : "  right-[-100%]"
            }`}
       >
         <div

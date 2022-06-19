@@ -1,8 +1,9 @@
 import React from "react";
 import Timeline from "./Timeline";
-import { FaStar, FaCheck } from "react-icons/fa";
+import { FaRegEnvelope, FaStar, FaCheck } from "react-icons/fa";
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
+import { faemail, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,23 +32,36 @@ const About = (mode) => {
         </div>
         <div className="text-base">
           <p>
-            Back in 2020 I discover javascript and I was amazed with its
-            versatality on web development. While learning javscript I came to
-            know about React and started experimenting. As I go more deep into
-            it I fall in love with the possibilities it gave me to create. While
-            learning react through internet, I completed my bachelor degree from
-            victoria University.
+            Back in 2020 I started learning web development with javascript as
+            my main langauge. While learning javscript I came to know about
+            React and started experimenting. As I learnt more, I fell in love
+            with all the possibilities of things you could create with it.
           </p>
           <p className="mt-2">
-            Fast forward to 2022, I have finally polished and developed
-            expertise in a lot of frontend skills and I am ready to take on new
-            challenges and opportunities. I enjoy turning designs into
-            beautiful, interactive and accessible experiences with attention to
-            the smallest of details. I strongly believe in writing clean and
-            scalable code. I am constantly learning and keeping myself
-            up-to-date with emerging technologies and love challenging myself to
-            learn something new every now and then
+            2022, with my bachelors degree I finally polished and developed
+            skills require for forntend web developement. I love turning designs
+            into beautiful, interactive and accessible experiences with
+            attention to the smallest of details. I strongly believe in writing
+            clean and scalable code. As of my competent in web development, I am
+            ready to take on new challenges and oppurtunities.
           </p>
+
+          <p className="text-red-400 my-4">
+            So, if you like my work and feel like you have a role that could
+            fit, feel free to reach out.
+          </p>
+          <div className=" w-[100px] flex items-center justify-between">
+            <a href="mailto:krisnachhetri07@gmail.com">
+              <FaRegEnvelope className="hover:text-red-400  " />
+            </a>
+
+            <a href="https://www.linkedin.com/in/krishna-paudel-4724541b1/">
+              <FaLinkedinIn className="hover:text-red-400 " />
+            </a>
+            <a href="https://twitter.com/krishnapaudel07">
+              <FaTwitter className="hover:text-red-400 " />
+            </a>
+          </div>
         </div>
       </div>
       <Timeline className="w-full" theme={mode.mode} />

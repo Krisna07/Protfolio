@@ -16,6 +16,9 @@ function App() {
     setLight(window.matchMedia("(prefers-color-scheme:dark)").matches);
     window.addEventListener("scroll", handleScroll);
   }, []);
+  document.querySelector("body").style.background = `${
+    light ? "black" : "white"
+  }`;
 
   return (
     <div

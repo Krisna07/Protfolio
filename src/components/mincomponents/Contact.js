@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 const Contact = (theme) => {
   return (
@@ -13,21 +13,23 @@ const Contact = (theme) => {
       <div className="p-2 md:w-full text-center text-base ">
         <p>
           Since I have collected required skillset to hopon to my coding carrer.
-          Even though I have specific skillset as listed I am open for the
-          opportunities within the bounderies of my skillset and beyond. Feel
-          free to contact me for more information.
+          Though I have specific skillset as listed I am open for the
+          opportunities within the bounderies and beyond my skillset. So, if you
+          like my work and feel like you have a role that could fit, feel free
+          to reach out.
         </p>
       </div>
       <div className="w-full flex items-center justify-center my-4 md:hidden">
-        <div className="w-3/12 flex items-center justify-between text-2xl ">
-          <a href="https://www.facebook.com/krishnapaudel007">
-            <FaFacebook className="hover:text-red-400" />
+        <div className="w-2/6 flex items-center justify-between">
+          <a href="https://github.com/Krisna07">
+            <FaGithub className="hover:text-red-400  " />
           </a>
+
           <a href="https://www.linkedin.com/in/krishna-paudel-4724541b1/">
-            <FaLinkedinIn className="hover:text-red-400" />
+            <FaLinkedinIn className="hover:text-red-400 " />
           </a>
           <a href="https://twitter.com/krishnapaudel07">
-            <FaTwitter className="hover:text-red-400" />
+            <FaTwitter className="hover:text-red-400 " />
           </a>
         </div>
       </div>

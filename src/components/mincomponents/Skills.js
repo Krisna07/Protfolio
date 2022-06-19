@@ -5,7 +5,7 @@ const Skills = (mode) => {
     { title: "Langauge", item: "Javascript" },
     {
       title: "Framework",
-      item: "React, NextJS, Rest API, Express, TailwindCSS",
+      item: "React, Rest API, Express, TailwindCSS",
     },
     {
       title: "Other",
@@ -13,13 +13,13 @@ const Skills = (mode) => {
     },
     {
       title: "Learning",
-      item: "Gatsby, TypeScript, GSAP, SCSS",
+      item: " TypeScript, GSAP, SCSS",
     },
   ];
 
   return (
     <div className="w-full ">
-      <h1 className="text-[24px] font-bold">Skills</h1>
+      <h1 className="text-[24px] font-bold">Skillsets</h1>
       <div className=" w-full flex items-center flex-col  ">
         {skills.map((skill) => {
           return (

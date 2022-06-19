@@ -9,7 +9,6 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
   scroll-behavior: smooth;
   cursor: url(./components/images/cursor.png), auto;
 }
@@ -176,7 +175,4 @@ code {
   100% {
     transform: rotate(0);
   }
-}
-.timeline:hover .desc {
-  font-size: 20px;
 }
