@@ -4,6 +4,7 @@ import gsap from "gsap";
 const Greetings = (theme) => {
   const heading = useRef(null);
   const shortDesc = useRef(null);
+  const [head, setHead] = useState();
 
   useEffect(() => {
     const elHeading = heading.current;
@@ -20,20 +21,21 @@ const Greetings = (theme) => {
       { translateY: 10, opacity: 0 },
       { translateY: 0, opacity: 1, duration: 1 }
     );
-  }, []);
+  });
+  const texts = ["Krishna Paudel", "Web Developer"];
 
   return (
     <div className=" flex flex-col items-start justify-center relative  relative ">
       <div className="z-0 flex flex-col items-center justify-center">
         <div className="p-4  font-mono text-l w-full overflow-hidden md:text-xl ">
-          <div className="m-2 text-red-400" ref={heading}>
+          <div className="m-2 text-red-400 md:text-4xl" ref={heading}>
             Hi, I am
           </div>
           <br />
           <div className="relative m-2 flex item-center md:w-[32ch] w-[22ch]">
-            <span className=" py-2  font-bold md:text-4xl   md:flex whitespace-nowrap text-brand-accent hidden">
-              {"Krishna Paudel"}
-              <span className="text-l md:text-3xl">👋</span>
+            <span className=" py-2  font-bold md:text-4xl   md:flex whitespace-nowrap text-brand-accent hidden ">
+              {texts[0]}
+              <span className="text-l md:text-3xl">{head}👋</span>
             </span>
             <span className=" py-2  font-bold md:text-4xl   whitespace-nowrap text-brand-accent md:hidden">
               {"<>Krishna Paudel</>"}

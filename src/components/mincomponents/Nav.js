@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 import { FaArrowUp } from "react-icons/fa";
-import { useRef } from "react";
+
 import MobileNav from "./MobileNav";
 import { saveAs } from "file-saver";
 import resume from "../files/Resume.pdf";
 
 const Nav = (mode) => {
-  const [tab, setTab] = useState(false);
+  // const [tab, setTab] = useState(false);
   const tabs = ["About", "Projects", "Contact"];
   const saveFile = () => {
     saveAs(resume, "resume_KrishnaPaudel.pdf");
@@ -24,11 +24,9 @@ const Nav = (mode) => {
         <div className="items-start"></div>
         <div className="md:flex items-center   hidden list-none  ">
           {tabs.map((tab, count) => (
-            <Link to={`#${tab.toLowerCase()}`} smooth>
+            <Link to={`#${tab.toLowerCase()}`} smooth key={tab}>
               <div
-                key={tab}
                 className={`px-2 w-content relative flex flex-col items-center justify-center  active:text-red-400 text-[16px] mx-2 `}
-                onClick={() => setTab(!tab)}
               >
                 <span className={` ${menuHover}`}>
                   <span className="text-red-400 mr-2 ">0.{count + 1}</span>

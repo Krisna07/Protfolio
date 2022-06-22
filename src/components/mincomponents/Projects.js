@@ -38,6 +38,7 @@ const Projects = ({ theme }) => {
             className={`w-full md:m-4 my-4 h-[400px] flex   ${
               count % 2 == 0 ? "flex-row" : "flex-row-reverse"
             } items-center md:items-start justify-center my-6 md:gap-x-8 relative `}
+            key={project.name}
           >
             <div
               className={`w-full  basis-1/3 flex flex-col h-full  items-center  justify-start md:relative absolute  p-4`}
@@ -45,7 +46,7 @@ const Projects = ({ theme }) => {
               <div className="relative w-full h-[20%]   my-4 ">
                 <div
                   className={`md:absolute relative ${
-                    count % 2 == 0 ? "left" : "right"
+                    count % 2 === 0 ? "left" : "right"
                   }-0  h-full flex text-${
                     count % 2 == 0 ? "left" : "right"
                   } flex-col `}
@@ -59,16 +60,16 @@ const Projects = ({ theme }) => {
               <div className="relative  w-full flex items-start  ">
                 <div
                   className={`projDes md:w-[400px] w-full  absolute ${
-                    count % 2 == 0 ? "left" : "right"
+                    count % 2 === 0 ? "left" : "right"
                   }-0  z-40 `}
                 >
                   <div
                     className={`md:w-full w-full z-40  float-${
-                      count % 2 == 0 ? "left" : "right"
+                      count % 2 === 0 ? "left" : "right"
                     } md:h-[20%]   ${
                       !theme ? "bg-gray-300" : "bg-gray-600"
                     } shadow-lg rounded text-[16px] text-${
-                      count % 2 == 0 ? "left" : "right"
+                      count % 2 === 0 ? "left" : "right"
                     } `}
                   >
                     <div className="w-full p-4 relative   ">{project.desc}</div>
