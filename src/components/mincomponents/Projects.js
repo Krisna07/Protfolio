@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-import todoImage from "../images/todoapp.jpg";
+import todoImage from "../images/Todoapp.jpg";
 import rsImage from "../images/realestate.jpg";
 
 const Projects = ({ theme }) => {
