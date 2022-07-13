@@ -49,7 +49,11 @@ const Greetings = (theme) => {
             ></span>
           </div>
         </div>
-        <h1 className="p-4 font-mono font-bold text-l text-gray-400 hover:text-gray-100 md:text-xl w-full overflow-hidden">
+        <h1
+          className={`p-4 font-mono font-bold text-l text-gray-500 ${
+            theme.theme ? "hover:text-gray-100" : "hover:text-gray-900"
+          } md:text-xl w-full overflow-hidden`}
+        >
           I build things for the web.
         </h1>
         <div
