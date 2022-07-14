@@ -93,7 +93,7 @@ const Projects = ({ theme }) => {
                         className={`w-full 
                     `}
                       >
-                        <a href="project.link"><FaGithub
+                        <a href={$`project.link`}><FaGithub
                           className={`hover:text-red-400 hover:text-[18px] ${
                             count % 2 == 0 ? "float-left" : "float-right"
                           }`}
