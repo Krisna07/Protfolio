@@ -23,7 +23,7 @@ function App() {
   return (
     <div
       className={`App m-0  ${
-        !light ? "text-gray-800" : "bg-black text-white"
+        !light ? "text-gray-800" : "bg-black text-gray-100"
       } w-full md:flex flex-col items-center relative `}
     >
       <div
