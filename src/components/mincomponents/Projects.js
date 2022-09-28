@@ -24,24 +24,21 @@ const Projects = ({ theme }) => {
     },
   ];
   return (
-    <div className=" w-full  md:text-lg px-4 scroll ">
+    <div className=" w-full  md:text-lg px-2 scroll  ">
       <div className="w-full  felx flex-col">
-        <div className=" w-content flex items-center my-4 text-3xl text-bold font-bold relative">
-          <span className={`bg-${theme ? "black" : "white"} pr-4`}>
-            Something I have Built
-          </span>
-
-          <span className="w-full h-px bg-gray-400 mx-3 absolute z-[-10]"></span>
+        <div className="flex items-center space-between my-4 text-3xl text-bold font-bold">
+          <div className=" w-[fit-content]">Something I have Built</div>
+          <span className="w-full h-px bg-gray-400 ml-4"></span>
         </div>
         {projects.map((project, count) => (
           <div
             className={`w-full py-8 h-[400px] flex   ${
               count % 2 === 0 ? "flex-row" : "flex-row-reverse"
-            } items-center md:items-start justify-center my-6 md:gap-x-8 relative `}
+            } items-center md:items-start justify-center  md:gap-x-8 relative `}
             key={project.name}
           >
             <div
-              className={`w-[90%] basis-1/3 flex-wrap flex flex-col h-full  items-center  justify-start md:relative absolute  p-4`}
+              className={`w-full basis-1/3 flex-wrap flex flex-col h-full  items-center  justify-start md:relative absolute p-2`}
             >
               <div className="relative w-full h-[20%]   my-4 ">
                 <div

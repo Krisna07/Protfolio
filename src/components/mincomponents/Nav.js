@@ -19,22 +19,23 @@ const Nav = (mode) => {
   return (
     <BrowserRouter>
       <nav
-        className={`w-full text-right flex  justify-between m-auto absoulte top-0 `}
+        className={`md:w-full text-right flex items-center   m-auto absoulte top-0 `}
       >
-        <div className="items-start"></div>
-        <div className="md:flex items-center   hidden list-none  ">
-          {tabs.map((tab, count) => (
-            <Link to={`#${tab.toLowerCase()}`} smooth key={tab}>
-              <div
-                className={`px-2 w-content relative flex flex-col items-center justify-center  active:text-red-400 text-[16px] mx-2 `}
-              >
-                <span className={` ${menuHover}`}>
-                  <span className="text-red-400 mr-2 ">0.{count + 1}</span>
-                  {tab}
-                </span>
-              </div>
-            </Link>
-          ))}
+        <div className="w-full md:flex items-center  justify-between   hidden list-none  ">
+          <div className="w-3/4 md:flex items-center justify-center   hidden list-none ">
+            {tabs.map((tab, count) => (
+              <Link to={`#${tab.toLowerCase()}`} smooth key={tab}>
+                <div
+                  className={`px-2 w-content relative flex flex-col items-center justify-center  active:text-red-400 text-[16px] mx-2 `}
+                >
+                  <span className={` ${menuHover}`}>
+                    <span className="text-red-400 mr-2 ">0.{count + 1}</span>
+                    {tab}
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
           <div
             className={`px-2 w-content relative flex flex-col items-center justify-center  active:text-red-400 mx-2`}
             onClick={saveFile}

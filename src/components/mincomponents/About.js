@@ -1,9 +1,9 @@
 import React from "react";
 import Timeline from "./Timeline";
-import { FaRegEnvelope, FaStar, FaCheck } from "react-icons/fa";
-import { useState, useEffect, useRef } from "react";
+import { FaRegEnvelope } from "react-icons/fa";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { faemail, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,10 +25,11 @@ const About = (mode) => {
   }, []);
 
   return (
-    <div className="md:w-full md:text-sm mx-4 ">
-      <div className=" md:w-full mt-20 felx text-sm flex-col" ref={aboutRef}>
-        <div className="flex items-center my-4 text-3xl text-bold font-bold">
-          About <span className="w-full h-px bg-gray-400 ml-3"></span>
+    <div className="md:w-full md:text-sm px-2 ">
+      <div className=" md:w-full  felx text-sm flex-col" ref={aboutRef}>
+        <div className="flex items-center space-between my-4 text-3xl text-bold font-bold">
+          <span>About</span>
+          <span className="w-full h-px bg-gray-400 ml-4"></span>
         </div>
         <div className="text-base">
           <p>

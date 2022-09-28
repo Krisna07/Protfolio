@@ -22,27 +22,27 @@ function App() {
 
   return (
     <div
-      className={`App m-0  ${
+      className={` m-0  ${
         !light ? "text-gray-800" : "bg-black text-white"
       } w-full md:flex flex-col items-center relative `}
     >
       <div
-        className={`w-full h-10 flex items-center appshadow   m-auto md:text-base text-xs   bg-${
+        className={`w-full h-10 flex items-center justify-between appshadow   md:text-base text-xs   bg-${
           !light ? "white" : "black"
         } } fixed top-0 z-[999]`}
       >
-        <div className="basis-1/4 px-4 text-[20px]">
+        <div className=" px-4 text-[20px]">
           {light ? (
             <FaSun onClick={() => setLight(!light)} />
           ) : (
             <FaMoon onClick={() => setLight(!light)} />
           )}
         </div>
-        <div className="basis-3/4 px-4  ">
+        <div className="md:w-3/4 lg:w-2/6 flex items-center justify-center px-4  ">
           <Nav mode={light} />
         </div>
       </div>
-      <div className="w-full pt-[10vh]  items-center  flex flex-col z-10 divide">
+      <div className="w-full pt-[10vh]  items-center justify-center flex flex-col z-10  ">
         <section
           id="home"
           className="w-full flex items-center justify-center appshadow p-4  "
@@ -67,16 +67,25 @@ function App() {
             <Projects theme={light} />
           </div>
         </section>
-        <section className="w-full flex items-center justify-center appshadow py-4  ">
-          <div className="md:w-3/4 2xl:w-3/6 w-full m-4">
+        <section
+          id="skillset"
+          className="w-full flex items-center justify-center appshadow p-4  "
+        >
+          <div className="md:w-3/4 2xl:w-3/6">
             <Skills mode={light} />
           </div>
         </section>
-        <section id="contact" className="md:w-3/4 2xl:w-3/6 ">
-          <Contact theme={light} />
+        <section
+          id="skillset"
+          className="w-full flex items-center justify-center appshadow p-4  "
+        >
+          <div className="md:w-3/4 2xl:w-3/6">
+            <Contact theme={light} />
+          </div>
         </section>
       </div>
-      <div className="py-4 text-gray-500 text-[8px] ">
+
+      <div className="py-4 text-gray-500 text-[8px] flex items-center justify-center ">
         <span>Designed and Developed by Krishna Paudel</span>
       </div>
       <SideItems />

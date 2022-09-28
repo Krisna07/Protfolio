@@ -3,11 +3,11 @@ import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 const Contact = (theme) => {
   return (
-    <div className=" w-full   md:text-sm px-4 flex-col flex items-center scroll">
-      <div className=" w-full flex flex-auto items-center  justify-between m-4 text-3xl text-bold font-bold">
-        <span className="w-full h-px bg-gray-400 mx-3"></span>
+    <div className=" w-full   md:text-sm p-2 flex-col flex items-center scroll">
+      <div className=" w-[100%] flex  items-center  justify-between text-3xl text-bold font-bold">
+        <span className="w-full h-px bg-gray-400 mr-3"></span>
         <span className="w-full  text-center">Get In Touch</span>
-        <span className="w-full h-px bg-gray-400 mx-3"></span>
+        <span className="w-full h-px bg-gray-400 ml-3"></span>
       </div>
 
       <div className="p-2 md:w-full text-center text-base ">
