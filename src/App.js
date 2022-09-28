@@ -69,7 +69,7 @@ function App() {
         </section>
         <section className="w-full flex items-center justify-center appshadow py-4  ">
           <div className="md:w-3/4 2xl:w-3/6 w-full m-4">
-            <Skills />
+            <Skills mode={light} />
           </div>
         </section>
         <section id="contact" className="md:w-3/4 2xl:w-3/6 ">

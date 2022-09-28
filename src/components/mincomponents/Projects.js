@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import todoImage from "../images/todoapp.jpg";
-import rsImage from "../images/realestate.jpg";
+import rsImage from "../images/stripeclone.jpg";
 
 const Projects = ({ theme }) => {
   const projects = [
@@ -11,21 +11,21 @@ const Projects = ({ theme }) => {
       name: "Complex Todo App",
       desc: "This is a complete web app created using Reactjs. The app enables user to create task and set reminder for it. ",
       image: todoImage,
-      createdon: "VS-Code JavaScript HTML5 CSS Express Node Responsive",
+      createdon: " JavaScript Reactjs HTML5 CSS Express Node Responsive",
       link: " https://github.com/Krisna07/CriminalFaceRecognition_Repo",
     },
     {
       projectType: "Practise Project",
-      name: "Roger Realestate",
-      desc: "A real esttate website with created with plain javascript. Map js is integrated for map view. Designed and developed as a practise project ",
-      createdon: "VS-Code JavaScript HTML5 CSS MapJS Node Responsive",
+      name: "Stripe Clone",
+      desc: "This clone website was created using HTML, CSS and Reactjs. All the components are custom made thanks to react and css.",
+      createdon: " JavaScript HTML5 CSS React keyframes",
       image: rsImage,
-      link: "https://github.com/Krisna07/probable-waddle",
+      link: "https://github.com/Krisna07/StripeClone",
     },
   ];
   return (
     <div className=" w-full  md:text-lg px-4 scroll ">
-      <div className="  mt-20 felx flex-col">
+      <div className="w-full  felx flex-col">
         <div className=" w-content flex items-center my-4 text-3xl text-bold font-bold relative">
           <span className={`bg-${theme ? "black" : "white"} pr-4`}>
             Something I have Built
@@ -35,13 +35,13 @@ const Projects = ({ theme }) => {
         </div>
         {projects.map((project, count) => (
           <div
-            className={`w-full md:m-4 my-4 h-[400px] flex   ${
-              count % 2 == 0 ? "flex-row" : "flex-row-reverse"
+            className={`w-full py-8 h-[400px] flex   ${
+              count % 2 === 0 ? "flex-row" : "flex-row-reverse"
             } items-center md:items-start justify-center my-6 md:gap-x-8 relative `}
             key={project.name}
           >
             <div
-              className={`w-full  basis-1/3 flex flex-col h-full  items-center  justify-start md:relative absolute  p-4`}
+              className={`w-[90%] basis-1/3 flex-wrap flex flex-col h-full  items-center  justify-start md:relative absolute  p-4`}
             >
               <div className="relative w-full h-[20%]   my-4 ">
                 <div
@@ -67,7 +67,7 @@ const Projects = ({ theme }) => {
                     className={`md:w-full w-full z-40  float-${
                       count % 2 === 0 ? "left" : "right"
                     } md:h-[20%]   ${
-                      !theme ? "bg-gray-300" : "bg-gray-600"
+                      !theme ? "bg-gray-100" : "bg-gray-900"
                     } shadow-lg rounded text-[16px] text-${
                       count % 2 === 0 ? "left" : "right"
                     } `}
@@ -83,22 +83,24 @@ const Projects = ({ theme }) => {
                       <div className="w-full text-red-400 md:text-auto  ">
                         <div
                           className={`md:w-4/6 w-full float-${
-                            count % 2 == 0 ? "left" : "right"
+                            count % 2 === 0 ? "left" : "right"
                           }`}
                         >
                           {project.createdon}
                         </div>
                       </div>
-                      <div
+
+                      <a
                         className={`w-full 
                     `}
+                        href={project.link}
                       >
                         <FaGithub
                           className={`hover:text-red-400 hover:text-[18px] ${
-                            count % 2 == 0 ? "float-left" : "float-right"
+                            count % 2 === 0 ? "float-left" : "float-right"
                           }`}
                         />
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -109,7 +111,7 @@ const Projects = ({ theme }) => {
             >
               <div className="h-full w-full ">
                 <div
-                  className="absolute  w-full h-[60%] md:h-full  rounded z-[20%] top-[20%] md:top-0  "
+                  className="absolute  w-full h-[60%] md:h-full  rounded z-[20%] top-[20%] md:top-0 md:hover:z-[80]"
                   style={{
                     backgroundImage: `url(${project.image})`,
                     backgroundPosition: "center",
@@ -117,7 +119,7 @@ const Projects = ({ theme }) => {
                     backgroundRepeat: "no-repeat",
                   }}
                 >
-                  <div className="absolute w-full h-full bg-gray-600 md:opacity-[0.3] opacity-[0.8] md:hover:opacity-0"></div>
+                  <div className="absolute w-full h-full bg-gray-600 md:opacity-[0.3] opacity-[0.8] md:hover:opacity-0 rounded"></div>
                 </div>
               </div>
             </div>
