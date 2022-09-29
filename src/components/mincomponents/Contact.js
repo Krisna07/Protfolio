@@ -12,9 +12,9 @@ const Contact = (theme) => {
 
       <div className="p-2 md:w-full text-center text-base ">
         <p>
-          Since I have collected required skillset to hopon to my coding carrer.
-          Though I have specific skillset as listed I am open for the
-          opportunities within the bounderies and beyond my skillset. So, if you
+          Since I have collected required skillset to hop on to my coding
+          career. Though I have specific skillset as listed I am open for the
+          opportunities within the boundaries and beyond my skillset. So, if you
           like my work and feel like you have a role that could fit, feel free
           to reach out.
         </p>
