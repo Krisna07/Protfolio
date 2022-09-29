@@ -14,7 +14,7 @@ const Timeline = (theme) => {
     {
       date: "2018",
       uni: "Australian Institute of Business and Technology",
-      course: "Dimploma/Advance Diploma of Information Technology",
+      course: "Diploma/Advance Diploma of Information Technology",
     },
     {
       date: "2020",

@@ -2,7 +2,7 @@ import React from "react";
 import { FaCheck } from "react-icons/fa";
 const Skills = (mode) => {
   const skills = [
-    { title: "Langauge", item: "Javascript" },
+    { title: "Langauge", item: "JavaScript" },
     {
       title: "Framework",
       item: "React, Rest API, Express, TailwindCSS",

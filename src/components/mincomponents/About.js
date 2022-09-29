@@ -33,18 +33,18 @@ const About = (mode) => {
         </div>
         <div className="text-base">
           <p>
-            Back in 2020 I started learning web development with javascript as
-            my main langauge. While learning javscript I came to know about
+            Back in 2020 I started learning web development with JavaScript as
+            my main langauge. While learning JavaScript I came to know about
             React and started experimenting. As I learnt more, I fell in love
             with all the possibilities of things you could create with it.
           </p>
           <p className="mt-2">
             2022, with my bachelors degree I finally polished and developed
-            skills require for forntend web developement. I love turning designs
+            skills require for frontend web developement. I love turning designs
             into beautiful, interactive and accessible experiences with
             attention to the smallest of details. I strongly believe in writing
             clean and scalable code. As of my competent in web development, I am
-            ready to take on new challenges and oppurtunities.
+            ready to take on new challenges and opportunities.
           </p>
 
           <p className="text-red-400 my-4">

@@ -62,7 +62,7 @@ const Greetings = (theme) => {
         >
           I’m a frontend developer specializing in building (and occasionally
           designing) exceptional digital products using the latest stacks and
-          frameworks. Currently, I’m avaialble for next project to put my hand
+          frameworks. Currently, I’m available for next project to put my hand
           on.
         </div>
       </div>
