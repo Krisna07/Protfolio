@@ -4,7 +4,7 @@ import gsap from "gsap";
 const Greetings = (theme) => {
   const heading = useRef(null);
   const shortDesc = useRef(null);
-  const [head, setHead] = useState();
+  const [head, setHead] = useState("Krishna Paudel");
 
   useEffect(() => {
     const elHeading = heading.current;
@@ -23,6 +23,14 @@ const Greetings = (theme) => {
     );
   });
   const texts = ["Krishna Paudel", "Web Developer"];
+  const thisType = texts[1].split("");
+  console.log(thisType);
+
+  console.log(head);
+  const cursor = document.querySelector(".cursor").style.width;
+  useEffect(() => {
+    console.log(cursor);
+  }, [cursor]);
 
   return (
     <div className=" flex flex-col items-start justify-center relative  relative ">
@@ -32,9 +40,8 @@ const Greetings = (theme) => {
             Hi, I am
           </div>
           <br />
-          <div className="relative m-2 flex item-center md:w-[32ch] w-[22ch]">
+          <div className="relative m-2 flex item-center md:w-[fit-content] w-[22ch] pr-8">
             <span className=" py-2  font-bold md:text-4xl   md:flex whitespace-nowrap text-brand-accent hidden ">
-              {texts[0]}
               <span className="text-l md:text-3xl">{head}👋</span>
             </span>
             <span className=" py-2  font-bold md:text-4xl   whitespace-nowrap text-brand-accent md:hidden">

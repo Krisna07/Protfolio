@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, useNavigate } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
 import { FaArrowUp } from "react-icons/fa";
 
@@ -7,12 +7,28 @@ import MobileNav from "./MobileNav";
 import { saveAs } from "file-saver";
 import resume from "../files/Resume.pdf";
 
-const Nav = (mode) => {
-  // const [tab, setTab] = useState(false);
+const Nav = ({ mode, offsetY }) => {
   const tabs = ["About", "Projects", "Contact"];
+
+  // const navigate = useNavigate();
   const saveFile = () => {
     saveAs(resume, "resume_KrishnaPaudel.pdf");
   };
+
+  // const thisUrl = window.location.href;
+  // console.log(thisUrl);
+  // useEffect(() => {
+  //   if (offsetY === 500) {
+  //     console.log("about");
+  //   }
+
+  //   if (offsetY === 1000) {
+  //     console.log("projects");
+  //   }
+  //   if (offsetY === 1500) {
+  //     console.log("contact");
+  //   }
+  // }, [offsetY]);
 
   const menuHover =
     "hover:after:content-[''] after:w-0 hover:after:w-full hover:after:h-px hover:after:bg-red-300 hover-after-absolute hover:after:left-0 after:px-2 after:absolute after:bottom-0 text-sm font-medium hover:text-gray-500   ";
@@ -28,7 +44,7 @@ const Nav = (mode) => {
                 <div
                   className={`px-2 w-content relative flex flex-col items-center justify-center  active:text-red-400 text-[16px] mx-2 `}
                 >
-                  <span className={` ${menuHover}`}>
+                  <span className="hover:border-b-[1px] border-red-500 pr-2 flex items-center justify-center">
                     <span className="text-red-400 mr-2 ">0.{count + 1}</span>
                     {tab}
                   </span>
@@ -48,7 +64,7 @@ const Nav = (mode) => {
         <div className="w-8  items-end md:hidden block ">
           <MobileNav
             menuHover={menuHover}
-            theme={mode.mode}
+            theme={mode}
             tabs={tabs}
             saveFile={saveFile}
           />

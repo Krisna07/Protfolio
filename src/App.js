@@ -10,7 +10,7 @@ import Skills from "./components/mincomponents/Skills";
 
 function App() {
   const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  const handleScroll = () => setOffsetY(window.screenTop);
   const [light, setLight] = useState();
   useEffect(() => {
     setLight(window.matchMedia("(prefers-color-scheme:dark)").matches);
@@ -27,7 +27,7 @@ function App() {
       } w-full md:flex flex-col items-center relative `}
     >
       <div
-        className={`w-full h-10 flex items-center justify-between appshadow   md:text-base text-xs   bg-${
+        className={`w-full h-10 flex items-center justify-between appshadow py-8  md:text-base text-xs   bg-${
           !light ? "white" : "black"
         } } fixed top-0 z-[999]`}
       >
@@ -38,8 +38,8 @@ function App() {
             <FaMoon onClick={() => setLight(!light)} />
           )}
         </div>
-        <div className="md:w-3/4 lg:w-2/6 flex items-center justify-center px-4  ">
-          <Nav mode={light} />
+        <div className="md:w-3/4 lg:w-2/6 flex items-center justify-center px-4   ">
+          <Nav mode={light} offsetY={offsetY} />
         </div>
       </div>
       <div className="w-full pt-[10vh]  items-center justify-center flex flex-col z-10  ">
