@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, useNavigate } from "react-router-dom";
-import { HashLink as Link } from "react-router-hash-link";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { FaArrowUp } from "react-icons/fa";
 
 import MobileNav from "./MobileNav";
@@ -15,36 +14,28 @@ const Nav = ({ mode, offsetY }) => {
     saveAs(resume, "resume_KrishnaPaudel.pdf");
   };
 
-  // const thisUrl = window.location.href;
-  // console.log(thisUrl);
-  // useEffect(() => {
-  //   if (offsetY === 500) {
-  //     console.log("about");
-  //   }
-
-  //   if (offsetY === 1000) {
-  //     console.log("projects");
-  //   }
-  //   if (offsetY === 1500) {
-  //     console.log("contact");
-  //   }
-  // }, [offsetY]);
-
   const menuHover =
     "hover:after:content-[''] after:w-0 hover:after:w-full hover:after:h-px hover:after:bg-red-300 hover-after-absolute hover:after:left-0 after:px-2 after:absolute after:bottom-0 text-sm font-medium hover:text-gray-500   ";
   return (
-    <BrowserRouter>
+    <>
       <nav
         className={`md:w-full text-right flex items-center   m-auto absoulte top-0 `}
       >
         <div className="w-full md:flex items-center  justify-between   hidden list-none  ">
           <div className="w-3/4 md:flex items-center justify-center   hidden list-none ">
             {tabs.map((tab, count) => (
-              <Link to={`#${tab.toLowerCase()}`} smooth key={tab}>
+              <Link
+                smooth={true}
+                key={tab}
+                activeClass="active"
+                to={tab.toLowerCase()}
+                spy={true}
+                offset={-50}
+              >
                 <div
-                  className={`px-2 w-content relative flex flex-col items-center justify-center  active:text-red-400 text-[16px] mx-2 `}
+                  className={`px-2 w-content relative flex flex-col items-center justify-center  text-[16px] mx-2 `}
                 >
-                  <span className="hover:border-b-[1px] border-red-500 pr-2 flex items-center justify-center">
+                  <span className="hover:border-b-[1px] border-red-500 p-2 flex items-center justify-center">
                     <span className="text-red-400 mr-2 ">0.{count + 1}</span>
                     {tab}
                   </span>
@@ -70,15 +61,20 @@ const Nav = ({ mode, offsetY }) => {
           />
         </div>
       </nav>
-
-      <Link to="#home" smooth>
+      <Link
+        to="home"
+        activeClass="active"
+        spy={true}
+        offset={-50}
+        smooth={true}
+      >
         <button className="fixed md:bottom-10  bottom-[10px]  right-10 ">
           <div className="flex items-center flex-col ">
             <FaArrowUp className="m-2" />
           </div>
         </button>
       </Link>
-    </BrowserRouter>
+    </>
   );
 };
 

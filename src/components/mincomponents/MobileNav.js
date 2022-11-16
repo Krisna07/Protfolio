@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const MobileNav = ({ menuHover, theme, tabs, saveFile }) => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -60,9 +60,10 @@ const MobileNav = ({ menuHover, theme, tabs, saveFile }) => {
               className={`p-2 ${menuHover} w-content font-bold relative`}
             >
               <Link
-                to={`#${tab.toLowerCase()}`}
-                smooth
+                to={tab.toLowerCase()}
                 onClick={() => setOpenMenu(!openMenu)}
+                smooth={true}
+                spy={true}
               >
                 <div className={`w-[content] hover:text-red-400 text-left`}>
                   <span className="text-red-400 mr-2 ">0.{count + 1}</span>

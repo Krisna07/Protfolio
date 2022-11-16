@@ -27,10 +27,6 @@ const Greetings = (theme) => {
   console.log(thisType);
 
   console.log(head);
-  const cursor = document.querySelector(".cursor").style.width;
-  useEffect(() => {
-    console.log(cursor);
-  }, [cursor]);
 
   return (
     <div className=" flex flex-col items-start justify-center relative  relative ">

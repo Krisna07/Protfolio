@@ -68,7 +68,7 @@ function App() {
           </div>
         </section>
         <section
-          id="skillset"
+          id="contact"
           className="w-full flex items-center justify-center appshadow p-4  "
         >
           <div className="md:w-3/4 2xl:w-3/6">
@@ -76,7 +76,7 @@ function App() {
           </div>
         </section>
         <section
-          id="skillset"
+          id="contact"
           className="w-full flex items-center justify-center appshadow p-4  "
         >
           <div className="md:w-3/4 2xl:w-3/6">

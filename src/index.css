@@ -43,7 +43,13 @@ code {
 .appshadow {
   border-bottom: 1px solid rgba(143, 143, 143, 0.295);
 }
-
+.active {
+  border-bottom: 1px solid red;
+  color: red;
+}
+.active:hover {
+  border-bottom: none;
+}
 @keyframes cursor {
   0%,
   40% {
