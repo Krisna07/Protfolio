@@ -5,15 +5,8 @@ import Review from "./Review";
 import axios from "axios";
 
 const Contact = ({ theme }) => {
-  console.log(theme);
-
   const [data, setData] = useState([]);
-  const getData = async () => {
-    const { data } = await axios.get(`http://localhost:5000/api/review`);
-    localStorage.setItem("message", JSON.stringify(data));
-  };
-
-  console.log(data);
+  const [err, setErr] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     content: "",
@@ -25,20 +18,44 @@ const Contact = ({ theme }) => {
       [e.target.name]: e.target.value,
     }));
   };
-
-  const sendData = async (data) => {
-    await await axios.post(`http://localhost:5000/api/review/send`, data);
+  //getting the review data
+  const getData = async () => {
+    await axios
+      .get(`http://localhost:5000/api/review`)
+      .then((res) => {
+        setData(res.data.message.review);
+        localStorage.setItem(
+          "message",
+          JSON.stringify(res.data.message.review)
+        );
+      })
+      .catch((err) => {
+        setErr(err.message);
+      });
   };
+
+  //sending the review data to the back
+  const sendData = async (data) => {
+    await axios
+      .post(`http://localhost:5000/api/review/send`, data)
+      .then((response) => {
+        getData();
+      })
+      .catch((error) => {
+        setErr(error.message);
+      });
+  };
+  console.log(err);
+  console.log(localStorage.getItem("message"));
 
   useEffect(() => {
     getData();
-    setData(JSON.parse(localStorage.getItem("message")).message.review);
-  }, [setData]);
+  }, []);
+
+  console.log(data);
   const submitMessage = (e) => {
     e.preventDefault();
-    if (!formData) {
-      return sendData(formData);
-    }
+    sendData(formData);
 
     setFormData({
       name: "",
@@ -62,9 +79,9 @@ const Contact = ({ theme }) => {
           like my work and feel like you have a role that could fit, feel free
           to reach out.
         </p>
-        <div className="w-1/2 flex flex-col gap-4">
+        <div className="w-full flex flex-wrap gap-4">
           {data.map((data, x) => (
-            <Review message={data} />
+            <Review message={data} key={x} />
           ))}
         </div>
         <form
