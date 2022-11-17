@@ -45,14 +45,11 @@ const Contact = ({ theme }) => {
         setErr(error.message);
       });
   };
-  console.log(err);
-  console.log(localStorage.getItem("message"));
 
   useEffect(() => {
     getData();
   }, []);
 
-  console.log(data);
   const submitMessage = (e) => {
     e.preventDefault();
     sendData(formData);
@@ -93,7 +90,7 @@ const Contact = ({ theme }) => {
           </span>
 
           <div className="w-full flex flex-col gap-2 items-center text-left ">
-            <div className="w-1/2 flex flex-col gap-2">
+            <div className="w-full md:w-1/2 flex flex-col gap-2">
               <h3>Your Name</h3>
               <input
                 type="text"
@@ -105,7 +102,7 @@ const Contact = ({ theme }) => {
                 onChange={onchange}
               />
             </div>
-            <div className="w-1/2 flex flex-col gap-1 ">
+            <div className=" w-full md:w-1/2 flex flex-col gap-2 ">
               <h3>Message</h3>
               <textarea
                 type="text"

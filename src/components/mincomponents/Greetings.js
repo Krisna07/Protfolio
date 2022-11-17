@@ -24,9 +24,6 @@ const Greetings = (theme) => {
   });
   const texts = ["Krishna Paudel", "Web Developer"];
   const thisType = texts[1].split("");
-  console.log(thisType);
-
-  console.log(head);
 
   return (
     <div className=" flex flex-col items-start justify-center relative  relative ">

@@ -64,6 +64,7 @@ const MobileNav = ({ menuHover, theme, tabs, saveFile }) => {
                 onClick={() => setOpenMenu(!openMenu)}
                 smooth={true}
                 spy={true}
+                offset={-30}
               >
                 <div className={`w-[content] hover:text-red-400 text-left`}>
                   <span className="text-red-400 mr-2 ">0.{count + 1}</span>

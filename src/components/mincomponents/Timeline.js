@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  FaGraduationCap,
-  FaList,
-  FaUserGraduate,
-  FaBookReader,
-  FaRegHeart,
-  FaBuilding,
-  FaCalendar,
-} from "react-icons/fa";
+import { FaGraduationCap, FaBuilding, FaCalendar } from "react-icons/fa";
 
 const Timeline = (theme) => {
   const education = [
