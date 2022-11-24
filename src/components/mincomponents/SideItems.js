@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  FaFacebookF,
-  FaGithub,
-  FaTwitter,
-  FaLinkedinIn,
-  FaSun,
-  FaMoon,
-} from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 const SideItems = () => {
   return (

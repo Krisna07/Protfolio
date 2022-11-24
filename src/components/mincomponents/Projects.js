@@ -27,7 +27,7 @@ const Projects = ({ theme }) => {
     <div className=" w-full  md:text-lg px-2 scroll  ">
       <div className="w-full  felx flex-col">
         <div className="flex items-center space-between my-4 text-3xl text-bold font-bold">
-          <div className=" w-[fit-content]">Something I have Built</div>
+          <div className={``}>Something I have Built</div>
           <span className="w-full h-px bg-gray-400 ml-4"></span>
         </div>
         {projects.map((project, count) => (
@@ -45,7 +45,7 @@ const Projects = ({ theme }) => {
                   className={`md:absolute relative ${
                     count % 2 === 0 ? "left" : "right"
                   }-0  h-full flex text-${
-                    count % 2 == 0 ? "left" : "right"
+                    count % 2 === 0 ? "left" : "right"
                   } flex-col `}
                 >
                   <span className="md:text-[12px] font-bold text-red-400">
@@ -74,7 +74,7 @@ const Projects = ({ theme }) => {
                   <div className="md:w-full w-full ">
                     <div
                       className={`w-full  text-[12px] py-4  text-${
-                        count % 2 == 0 ? "left" : "right"
+                        count % 2 === 0 ? "left" : "right"
                       } flex flex-col `}
                     >
                       <div className="w-full text-red-400 md:text-auto  ">

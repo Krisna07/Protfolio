@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 const MobileNav = ({ menuHover, theme, tabs, saveFile }) => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -41,7 +41,7 @@ const MobileNav = ({ menuHover, theme, tabs, saveFile }) => {
 
       <div
         className={` transition-right ease-in duration-300 
-           fixed top-10 z-40  ${
+           fixed top-14 z-40  ${
              openMenu
                ? "w-screen h-screen  right-[0] backdrop-filter backdrop-blur-sm"
                : "  right-[-100%]"

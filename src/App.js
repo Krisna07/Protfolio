@@ -4,9 +4,10 @@ import Greetings from "./components/mincomponents/Greetings";
 import Nav from "./components/mincomponents/Nav";
 import Projects from "./components/mincomponents/Projects";
 import { FaSun, FaMoon } from "react-icons/fa";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import SideItems from "./components/mincomponents/SideItems";
 import Skills from "./components/mincomponents/Skills";
+import Bubble from "./components/mincomponents/Bubbleanimation/Bubble";
 
 function App() {
   const [offsetY, setOffsetY] = useState(0);
@@ -19,10 +20,11 @@ function App() {
   document.querySelector("body").style.background = `${
     light ? "black" : "white"
   }`;
+  const stars = [...Array(10).keys()];
 
   return (
     <div
-      className={` m-0  ${
+      className={` m-0 leading-relaxed ${
         !light ? "text-gray-800" : "bg-black text-white"
       } w-full md:flex flex-col items-center relative `}
     >
@@ -42,10 +44,10 @@ function App() {
           <Nav mode={light} offsetY={offsetY} />
         </div>
       </div>
-      <div className="w-full pt-[10vh]  items-center justify-center flex flex-col z-10  ">
+      <div className=" pt-[10vh]  items-center justify-center flex flex-col  z-10 overflow-y">
         <section
           id="home"
-          className="w-full flex items-center justify-center appshadow p-4  "
+          className="w-full min-h-[100vh] flex items-center justify-center appshadow p-4 relative  "
         >
           <div className="md:w-3/4 2xl:w-3/6">
             <Greetings theme={light} />
@@ -53,31 +55,27 @@ function App() {
         </section>
         <section
           id="about"
-          className="w-full flex items-center justify-center appshadow p-4  "
+          className="w-full min-h-[100vh] flex flex-col items-center justify-center appshadow p-4  "
         >
           <div className="md:w-3/4 2xl:w-3/6">
             <About mode={light} />
           </div>
-        </section>
-        <section
-          id="projects"
-          className="w-full flex items-center justify-center appshadow p-4  "
-        >
-          <div className="md:w-3/4 2xl:w-3/6">
-            <Projects theme={light} />
-          </div>
-        </section>
-        <section
-          id="contact"
-          className="w-full flex items-center justify-center appshadow p-4  "
-        >
           <div className="md:w-3/4 2xl:w-3/6">
             <Skills mode={light} />
           </div>
         </section>
         <section
+          id="projects"
+          className="w-full min-h-[100vh] flex items-center justify-center appshadow p-4  "
+        >
+          <div className="md:w-3/4 2xl:w-3/6">
+            <Projects theme={light} />
+          </div>
+        </section>
+
+        <section
           id="contact"
-          className="w-full flex items-center justify-center appshadow p-4  "
+          className="w-full min-h-[100vh] flex flex-col items-center justify-center appshadow p-4 gap-8  "
         >
           <div className="md:w-3/4 2xl:w-3/6">
             <Contact theme={light} />
@@ -85,9 +83,9 @@ function App() {
         </section>
       </div>
 
-      <div className="py-4 text-gray-500 text-[8px] flex items-center justify-center ">
+      <footer className="py-4 text-gray-500 text-[8px] flex items-center justify-center ">
         <span>Designed and Developed by Krishna Paudel</span>
-      </div>
+      </footer>
       <SideItems />
     </div>
   );

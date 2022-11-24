@@ -28,7 +28,7 @@ const Timeline = (theme) => {
               className="p-2 w-full md:w-1/2   realtive "
             >
               <div
-                className={`title-font text-sm  w-full flex  shadow rounded  hover:shadow-xl md:flex-row flex-col items-center timeline  ${
+                className={`title-font text-sm  w-full flex  shadow rounded  hover:shadow-xl md:flex-row flex-col items-center   ${
                   !theme.theme ? "bg-white" : "bg-gray-900"
                 } p-2 rounded md:border-t-2 md:border-t-0 border-red-500 `}
               >

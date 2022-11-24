@@ -31,8 +31,8 @@ const About = (mode) => {
           <span>About</span>
           <span className="w-full h-px bg-gray-400 ml-4"></span>
         </div>
-        <div className="text-base">
-          <p>
+        <div className="text-base leading-relaxed">
+          <p className="">
             Back in 2020 I started learning web development with JavaScript as
             my main langauge. While learning JavaScript I came to know about
             React and started experimenting. As I learnt more, I fell in love

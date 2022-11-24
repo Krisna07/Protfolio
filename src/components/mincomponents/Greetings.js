@@ -22,11 +22,9 @@ const Greetings = (theme) => {
       { translateY: 0, opacity: 1, duration: 1 }
     );
   });
-  const texts = ["Krishna Paudel", "Web Developer"];
-  const thisType = texts[1].split("");
 
   return (
-    <div className=" flex flex-col items-start justify-center relative  relative ">
+    <div className=" h-full flex flex-col items-start justify-center relative  relative ">
       <div className="z-0 flex flex-col items-center justify-center">
         <div className="p-4  font-mono text-l w-full overflow-hidden md:text-xl ">
           <div className="m-2 text-red-400 md:text-4xl" ref={heading}>
