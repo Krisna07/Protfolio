@@ -36,7 +36,7 @@ const Greetings = (theme) => {
               <span className="text-l md:text-3xl">{head}👋</span>
             </span>
             <span className=" py-2  font-bold md:text-4xl   whitespace-nowrap text-brand-accent md:hidden">
-              {"<>Krishna Paudel</>"}
+              <h1>{"<>Krishna Paudel</>"}</h1>
             </span>
             <span
               className={`cursor ${
