@@ -47,7 +47,7 @@ function App() {
       <div className=" pt-[10vh]  items-center justify-center flex flex-col  z-10 overflow-y">
         <section
           id="home"
-          className="w-full min-h-[100vh] flex items-center justify-center appshadow p-4 relative  "
+          className="w-full min-h-[100vh] flex items-center justify-center appshadow p-4 relative leading-loose "
         >
           <div className="md:w-3/4 2xl:w-3/6">
             <Greetings theme={light} />
@@ -55,7 +55,7 @@ function App() {
         </section>
         <section
           id="about"
-          className="w-full min-h-[100vh] flex flex-col items-center justify-center appshadow p-4  "
+          className="w-full min-h-[100vh] flex flex-col items-center justify-center appshadow p-4 "
         >
           <div className="md:w-3/4 2xl:w-3/6">
             <About mode={light} />

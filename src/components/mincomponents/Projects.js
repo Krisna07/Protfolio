@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLink } from "react-icons/fa";
 import todoImage from "../images/todoapp.jpg";
 import rsImage from "../images/stripeclone.jpg";
 
@@ -13,6 +13,7 @@ const Projects = ({ theme }) => {
       image: todoImage,
       createdon: " JavaScript Reactjs HTML5 CSS Express Node Responsive",
       link: " https://github.com/Krisna07/CriminalFaceRecognition_Repo",
+      webLink: "",
     },
     {
       projectType: "Practise Project",
@@ -21,6 +22,7 @@ const Projects = ({ theme }) => {
       createdon: " JavaScript HTML5 CSS React keyframes",
       image: rsImage,
       link: "https://github.com/Krisna07/StripeClone",
+      webLink: "https://stripe-cloneapp.vercel.app/",
     },
   ];
   return (
@@ -87,17 +89,30 @@ const Projects = ({ theme }) => {
                         </div>
                       </div>
 
-                      <a
-                        className={`w-full 
-                    `}
-                        href={project.link}
-                      >
-                        <FaGithub
-                          className={`hover:text-red-400 hover:text-[18px] ${
-                            count % 2 === 0 ? "float-left" : "float-right"
-                          }`}
-                        />
-                      </a>
+                      <div className="w-full flex gap-4 items-star">
+                        <a
+                          className={`w-full 
+                  `}
+                          href={project.link}
+                        >
+                          <FaGithub
+                            className={`hover:text-red-400 hover:text-[18px] ${
+                              count % 2 === 0 ? "float-left" : "float-right"
+                            }`}
+                          />
+                        </a>
+                        {project.webLink ? (
+                          <a href={project.webLink}>
+                            <FaLink
+                              className={`hover:text-red-400 hover:text-[18px] ${
+                                count % 2 === 0 ? "float-left" : "float-right"
+                              }`}
+                            />
+                          </a>
+                        ) : (
+                          ""
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
