@@ -33,7 +33,7 @@ const Greetings = (theme) => {
           <br />
           <div className="relative m-2 flex item-center md:w-[fit-content] w-[22ch] pr-8">
             <span className=" py-2  font-bold md:text-4xl   md:flex whitespace-nowrap text-brand-accent hidden ">
-              <span className="text-l md:text-3xl">{head}👋</span>
+              <h1 className="text-l md:text-3xl">{head}👋</h1>
             </span>
             <span className=" py-2  font-bold md:text-4xl   whitespace-nowrap text-brand-accent md:hidden">
               <h1>{"<>Krishna Paudel</>"}</h1>

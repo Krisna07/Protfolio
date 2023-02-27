@@ -7,7 +7,6 @@ import { FaSun, FaMoon } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import SideItems from "./components/mincomponents/SideItems";
 import Skills from "./components/mincomponents/Skills";
-import Bubble from "./components/mincomponents/Bubbleanimation/Bubble";
 
 function App() {
   const [offsetY, setOffsetY] = useState(0);
@@ -20,7 +19,6 @@ function App() {
   document.querySelector("body").style.background = `${
     light ? "black" : "white"
   }`;
-  const stars = [...Array(10).keys()];
 
   return (
     <div
