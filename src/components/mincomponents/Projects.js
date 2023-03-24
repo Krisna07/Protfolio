@@ -29,7 +29,7 @@ const Projects = ({ theme }) => {
     <div className=" w-full  md:text-lg px-2 scroll  ">
       <div className="w-full  felx flex-col">
         <div className="flex items-center space-between my-4 text-3xl text-bold font-bold">
-          <div className={``}>Something I have Built</div>
+          <div className={`w-"max-content"`}>Something I have Built</div>
           <span className="w-full h-px bg-gray-400 ml-4"></span>
         </div>
         {projects.map((project, count) => (
