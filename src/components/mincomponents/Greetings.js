@@ -4,6 +4,7 @@ import gsap from "gsap";
 const Greetings = (theme) => {
   const heading = useRef(null);
   const shortDesc = useRef(null);
+  const headChange = useRef(null);
   const [head, setHead] = useState("Krishna Paudel");
 
   useEffect(() => {
@@ -21,6 +22,10 @@ const Greetings = (theme) => {
       { translateY: 0, opacity: 1, duration: 1 }
     );
   });
+  useEffect(() => {
+    const elCursor = headChange.current;
+    console.log(elCursor.getBoundingClientRect().width);
+  }, [10]);
 
   return (
     <div className=" h-full flex flex-col items-start justify-center relative  relative ">
@@ -43,6 +48,7 @@ const Greetings = (theme) => {
                   ? "bg-white border-black border-l-4 border-solid "
                   : "bg-black border-white border-l-4 border-solid  "
               } `}
+              ref={headChange}
             ></span>
           </div>
         </div>

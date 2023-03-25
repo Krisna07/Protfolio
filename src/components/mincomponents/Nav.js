@@ -11,7 +11,7 @@ const Nav = ({ mode, offsetY }) => {
 
   // const navigate = useNavigate();
   const saveFile = () => {
-    saveAs(resume, "resume_KrishnaPaudel.pdf");
+    saveAs(resume, "Krishna_Paudel_resume.pdf");
   };
 
   const menuHover =

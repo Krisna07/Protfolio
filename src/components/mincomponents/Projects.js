@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
 import todoImage from "../images/todoapp.jpg";
 import rsImage from "../images/stripeclone.jpg";
+import Subheadings from "./Subheadings";
 
 const Projects = ({ theme }) => {
   const projects = [
@@ -28,10 +29,7 @@ const Projects = ({ theme }) => {
   return (
     <div className="w-full  md:text-lg scroll  ">
       <div className="w-full  felx flex-col">
-        <div className="flex items-center space-between my-4 text-3xl text-bold font-bold">
-          <div className={``}>Something I have Built</div>
-          <span className="w-full h-px bg-gray-400 ml-4"></span>
-        </div>
+        <Subheadings subHeading={"Something I have built"} />
         {projects.map((project, count) => (
           <div
             className={`w-full py-8 h-[400px] flex   ${
