@@ -64,7 +64,7 @@ function App() {
         </section>
         <section
           id="projects"
-          className="w-full min-h-[100vh] flex items-center justify-center appshadow p-4  "
+          className="w-full min-h-[100vh] flex flex-col items-center justify-center appshadow p-4 "
         >
           <div className="md:w-3/4 2xl:w-3/6">
             <Projects theme={light} />

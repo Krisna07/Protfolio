@@ -12,7 +12,6 @@ const Greetings = (theme) => {
 
     gsap.fromTo(
       elHeading,
-
       { translateY: 10, opacity: 0 },
       { translateY: 0, opacity: 4, duration: 1 }
     );

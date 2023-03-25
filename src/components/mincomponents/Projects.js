@@ -26,11 +26,15 @@ const Projects = ({ theme }) => {
     },
   ];
   return (
-    <div className=" w-full  md:text-lg px-2 scroll  ">
+    <div className="w-full  md:text-lg scroll  ">
       <div className="w-full  felx flex-col">
-        <div className="flex items-center space-between my-4 text-3xl text-bold font-bold">
-          <div className={``}>Something I have Built</div>
-          <span className="w-full h-px bg-gray-400 ml-4"></span>
+        <div className="flex items-center content-center my-4 text-3xl text-bold font-bold relative z-['10']">
+          <p
+            className={`w-"max-content" bg-${!theme ? "white" : "black"} pr-4`}
+          >
+            Something I have Built
+          </p>
+          <span className="w-full h-px bg-gray-400 ml-4 absolute z-[-1]"></span>
         </div>
         {projects.map((project, count) => (
           <div
@@ -123,7 +127,7 @@ const Projects = ({ theme }) => {
             >
               <div className="h-full w-full ">
                 <div
-                  className="absolute  w-full h-[60%] md:h-full  rounded z-[20%] top-[20%] md:top-0 md:hover:z-[80]"
+                  className="absolute  w-full h-[60%] md:h-full  rounded z-[20%] top-[20%] md:top-0 md:hover:z-[80] hover:scale-125 transition"
                   style={{
                     backgroundImage: `url(${project.image})`,
                     backgroundPosition: "center",

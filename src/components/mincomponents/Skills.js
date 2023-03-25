@@ -23,14 +23,14 @@ const Skills = (mode) => {
         <div className=" w-[fit-content]">Skillset</div>
         <span className="w-full h-px bg-gray-400 ml-4"></span>
       </div>
-      <div className=" w-full flex items-center flex-col p-2 gap-4  ">
+      <div className=" w-full flex items-center flex-col  gap-4  ">
         {skills.map((skill) => {
           return (
             <div
               key={skill.title}
               className={` bg-${
                 mode.mode ? "gray-900" : "gray-100"
-              } m-2 rounded flex flex-col p-2  items-center w-full   `}
+              }  rounded flex flex-col p-4  items-center w-full   `}
             >
               <div className="flex w-full text-gray-500  text-[20px]">
                 {skill.title}
