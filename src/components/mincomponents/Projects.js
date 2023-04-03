@@ -25,7 +25,7 @@ const Projects = ({ theme }) => {
       createdon: " JavaScript HTML5 CSS React keyframes",
       image: rsImage,
       link: "https://github.com/Krisna07/StripeClone",
-      webLink: "https://stripe-cloneapp.vercel.  },
+      webLink: "https://stripe-cloneapp.vercel. " },
   {
       projectType: "Frontend Mentor Challenge",
       name: "Dynamic card detail form",
