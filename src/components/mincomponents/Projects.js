@@ -4,6 +4,8 @@ import todoImage from "../images/todoapp.jpg";
 import rsImage from "../images/stripeclone.jpg";
 import Subheadings from "./Subheadings";
 
+import dsImage from "../images/383AD106-DEB6-4B52-AF12-C3FDF1EE174A.jpeg";
+
 const Projects = ({ theme }) => {
   const projects = [
     {
@@ -23,7 +25,15 @@ const Projects = ({ theme }) => {
       createdon: " JavaScript HTML5 CSS React keyframes",
       image: rsImage,
       link: "https://github.com/Krisna07/StripeClone",
-      webLink: "https://stripe-cloneapp.vercel.app/",
+      webLink: "https://stripe-cloneapp.vercel.  },
+  {
+      projectType: "Frontend Mentor Challenge",
+      name: "Dynamic card detail form",
+      desc: " A dynamic card detail input component that provides real-time feedback and data validation upon completion. It's the perfect solution for streamlining the form input process and creating an intuitive, user-friendly experience.",
+      createdon: " JavaScript HTML5 CSS React keyframes",
+      image: dsImage,
+      link: "https://github.com/Krisna07/StripeClone",
+      webLink: "https://interactivecardform-flax.vercel.app/",
     },
   ];
   return (
