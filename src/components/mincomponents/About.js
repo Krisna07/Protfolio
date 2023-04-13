@@ -32,7 +32,11 @@ const About = (mode) => {
           <span className="w-full h-px bg-gray-400 ml-4"></span>
         </div>
         <div className="flex gap-2 items-center">
-          <div className="text-base leading-relaxed tracking-wide text-gray-400 gap-2 ">
+          <div
+            className={`text-base leading-relaxed tracking-wide  gap-2 ${
+              mode ? "text-gray-400" : "text-black"
+            }`}
+          >
             <p>
               Back in 2020 I started learning web development with JavaScript as
               my main langauge. While learning JavaScript I came to know about
