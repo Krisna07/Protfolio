@@ -60,7 +60,7 @@ const Greetings = (theme) => {
           I build things for the web.
         </h1>
         <div
-          className="md:w-[60ch] p-4 text-gray-400 relative z-0"
+          className="md:w-[60ch] p-4 text-gray-400 relative z-0 tracking-wide"
           ref={shortDesc}
         >
           I’m a frontend developer specializing in building (and occasionally
