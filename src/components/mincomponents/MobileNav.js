@@ -5,11 +5,11 @@ import { Link } from "react-scroll";
 const MobileNav = ({ menuHover, theme, tabs, saveFile }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
-  {
-    openMenu
-      ? window.addEventListener("scroll", { passive: true })
-      : window.addEventListener("scroll", { passive: false });
-  }
+  // {
+  //   openMenu
+  //     ? window.addEventListener("scroll", { passive: true })
+  //     : window.addEventListener("scroll", { passive: false });
+  // }
   const rotateTopBar = "transform rotate-[-135deg] absolute";
   const middleBar =
     "transform translate-x-40 transition-all  ease-in duration-900";
