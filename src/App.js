@@ -3,12 +3,13 @@ import Contact from "./components/mincomponents/Contact";
 import Greetings from "./components/mincomponents/Greetings";
 import Nav from "./components/mincomponents/Nav";
 import Projects from "./components/mincomponents/Projects";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { FaSun, FaMoon, FaArrowUp } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import SideItems from "./components/mincomponents/SideItems";
 import Skills from "./components/mincomponents/Skills";
 import { saveAs } from "file-saver";
 import resume from "./components/files/Resume.pdf";
+import { Link } from "react-scroll";
 
 function App() {
   const [offsetY, setOffsetY] = useState(0);
@@ -31,6 +32,20 @@ function App() {
         !light ? "text-gray-800" : "bg-black text-white"
       } w-full md:flex flex-col items-center relative `}
     >
+      <Link
+        to="home"
+        activeClass="active"
+        spy={true}
+        offset={-50}
+        smooth={true}
+        className="fixed bottom-10 right-10 bg-red-500 rounded z-[90] "
+      >
+        <button className=" md:bottom-10  bottom-[10px]  right-10 ">
+          <div className="flex items-center flex-col ">
+            <FaArrowUp className="m-2 arrowup" />
+          </div>
+        </button>
+      </Link>
       <div
         className={`w-full h-10 flex items-center justify-between  py-8  md:text-base text-xs  backdrop-blur  fixed top-0 z-[90] `}
       >

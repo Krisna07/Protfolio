@@ -46,19 +46,6 @@ const Nav = ({ mode, offsetY, saveFile }) => {
           />
         </div>
       </nav>
-      <Link
-        to="home"
-        activeClass="active"
-        spy={true}
-        offset={-50}
-        smooth={true}
-      >
-        <button className="fixed md:bottom-10  bottom-[10px]  right-10 ">
-          <div className="flex items-center flex-col ">
-            <FaArrowUp className="m-2" />
-          </div>
-        </button>
-      </Link>
     </>
   );
 };
