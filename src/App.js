@@ -40,7 +40,7 @@ function App() {
         smooth={true}
         className="fixed bottom-10 right-10 bg-red-500 rounded z-[90] "
       >
-        <button className=" md:bottom-10  bottom-[10px]  right-10 ">
+        <button className=" md:bottom-10  bottom-[10px]  right-10 text-white ">
           <div className="flex items-center flex-col ">
             <FaArrowUp className="m-2 arrowup" />
           </div>
@@ -60,10 +60,14 @@ function App() {
           <Nav mode={light} offsetY={offsetY} saveFile={saveFile} />
         </div>
         <div
-          className={`px-2 w-content relative flex flex-col items-center justify-center  active:text-red-400 mx-2`}
+          className={` w-content relative flex flex-col items-center justify-center  active:text-red-400 mx-2`}
           onClick={saveFile}
         >
-          <button className=" px-2 border-[1px] flex items-center justify-center border-red-500 border-solid rounded hover:text-red-400">
+          <button
+            className={`text-sm  px-4 py-1 border-[1px] flex bg-${
+              !light ? "white" : "black"
+            } items-center justify-center border-red-500 border-solid rounded hover:text-red-400 resumeBtn`}
+          >
             Resume
           </button>
         </div>
