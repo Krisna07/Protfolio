@@ -88,38 +88,40 @@ const Projects = ({ theme }) => {
                         count % 2 === 0 ? "left" : "right"
                       } flex flex-col gap-4 `}
                     >
-                      <div className="w-full  md:text-auto  ">
+                      <div
+                        className={`w-full  md:text-auto flex  justify-${
+                          count % 2 === 0 ? "start" : "end"
+                        } `}
+                      >
                         <div
-                          className={`md:w-4/6 w-full flex gap-2 flex-wrap float-${
-                            count % 2 === 0 ? "left" : "right"
-                          }`}
+                          className={`md:w-4/5 w-full flex items-center gap-2 flex-wrap justify-${
+                            count % 2 === 0 ? "start" : "end"
+                          }
+                          `}
                         >
                           {project.createdon.split(" ").map((items) => (
-                            <span className="py-1 px-2 bg-red-300 rounded ">
+                            <span className="py-1 px-2 bg-red-400 rounded hover:text-black">
                               {items}
                             </span>
                           ))}
                         </div>
                       </div>
 
-                      <div className="w-fit-content flex gap-4 items-start justify-center">
-                        <a
-                          className={`w-full 
-                  `}
-                          href={project.link}
-                        >
+                      <div
+                        className={`w-full flex gap-4 items-center justify-${
+                          count % 2 === 0 ? "start" : "end"
+                        } 
+                        `}
+                      >
+                        <a href={project.link}>
                           <FaGithub
-                            className={`hover:text-red-400 hover:text-[18px] ${
-                              count % 2 === 0 ? "float-left" : "float-right"
-                            }`}
+                            className={`hover:text-red-400 hover:text-[18px]`}
                           />
                         </a>
                         {project.webLink ? (
                           <a href={project.webLink}>
                             <FaLink
-                              className={`hover:text-red-400 hover:text-[18px] ${
-                                count % 2 === 0 ? "float-left" : "float-right"
-                              }`}
+                              className={`hover:text-red-400 hover:text-[18px] `}
                             />
                           </a>
                         ) : (
@@ -134,9 +136,9 @@ const Projects = ({ theme }) => {
             <div
               className={`w-full h-full md:basis-2/3 flex items-center justify-center   md:relative rounded  `}
             >
-              <div className="h-full w-full ">
+              <div className="h-fit-content w-full ">
                 <div
-                  className="absolute  w-full h-[60%] md:h-full  rounded  top-[20%] md:top-0 md:hover:z-[80] hover:scale-110 transition"
+                  className="absolute  w-full h-[80%] md:h-full  rounded  top-[20%] md:top-0 md:hover:z-[80] hover:scale-110 transition"
                   style={{
                     backgroundImage: `url(${project.image})`,
                     backgroundPosition: "top",
