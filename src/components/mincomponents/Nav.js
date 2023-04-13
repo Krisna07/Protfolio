@@ -3,26 +3,19 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import { FaArrowUp } from "react-icons/fa";
 
 import MobileNav from "./MobileNav";
-import { saveAs } from "file-saver";
-import resume from "../files/Resume.pdf";
 
-const Nav = ({ mode, offsetY }) => {
+const Nav = ({ mode, offsetY, saveFile }) => {
   const tabs = ["About", "Projects", "Contact"];
-
-  // const navigate = useNavigate();
-  const saveFile = () => {
-    saveAs(resume, "Krishna_Paudel_resume.pdf");
-  };
 
   const menuHover =
     "hover:after:content-[''] after:w-0 hover:after:w-full hover:after:h-px hover:after:bg-red-300 hover-after-absolute hover:after:left-0 after:px-2 after:absolute after:bottom-0 text-sm font-medium hover:text-gray-500   ";
   return (
     <>
       <nav
-        className={`md:w-full text-right flex items-center   m-auto absoulte top-0 `}
+        className={`md:w-full text-right flex items-center justify-center   m-auto absoulte top-0  `}
       >
         <div className="w-full md:flex items-center  justify-between   hidden list-none  ">
-          <div className="w-3/4 md:flex items-center justify-center   hidden list-none ">
+          <div className="w-full md:flex items-center justify-center   hidden list-none ">
             {tabs.map((tab, count) => (
               <Link
                 smooth={true}
@@ -42,14 +35,6 @@ const Nav = ({ mode, offsetY }) => {
                 </div>
               </Link>
             ))}
-          </div>
-          <div
-            className={`px-2 w-content relative flex flex-col items-center justify-center  active:text-red-400 mx-2`}
-            onClick={saveFile}
-          >
-            <button className=" px-2 border-[1px] flex items-center justify-center border-red-500 border-solid rounded hover:text-red-400">
-              Resume
-            </button>
           </div>
         </div>
         <div className="w-8  items-end md:hidden block ">

@@ -7,6 +7,8 @@ import { FaSun, FaMoon } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import SideItems from "./components/mincomponents/SideItems";
 import Skills from "./components/mincomponents/Skills";
+import { saveAs } from "file-saver";
+import resume from "./components/files/Resume.pdf";
 
 function App() {
   const [offsetY, setOffsetY] = useState(0);
@@ -19,6 +21,9 @@ function App() {
   document.querySelector("body").style.background = `${
     light ? "black" : "white"
   }`;
+  const saveFile = () => {
+    saveAs(resume, "Krishna_Paudel_resume.pdf");
+  };
 
   return (
     <div
@@ -27,19 +32,25 @@ function App() {
       } w-full md:flex flex-col items-center relative `}
     >
       <div
-        className={`w-full h-10 flex items-center justify-between appshadow py-8  md:text-base text-xs   bg-${
-          !light ? "white" : "black"
-        } } fixed top-0 z-[999]`}
+        className={`w-full h-10 flex items-center justify-between  py-8  md:text-base text-xs  backdrop-blur  fixed top-0 z-[90] `}
       >
-        <div className=" px-4 text-[20px]">
+        <div className="px-4 text-[20px]">
           {light ? (
             <FaSun onClick={() => setLight(!light)} />
           ) : (
             <FaMoon onClick={() => setLight(!light)} />
           )}
         </div>
-        <div className="md:w-3/4 lg:w-2/6 flex items-center justify-center px-4   ">
-          <Nav mode={light} offsetY={offsetY} />
+        <div className="md:w-3/4  flex items-center justify-center px-4   ">
+          <Nav mode={light} offsetY={offsetY} saveFile={saveFile} />
+        </div>
+        <div
+          className={`px-2 w-content relative flex flex-col items-center justify-center  active:text-red-400 mx-2`}
+          onClick={saveFile}
+        >
+          <button className=" px-2 border-[1px] flex items-center justify-center border-red-500 border-solid rounded hover:text-red-400">
+            Resume
+          </button>
         </div>
       </div>
       <div className=" pt-[10vh]  items-center justify-center flex flex-col  z-10 overflow-y ">

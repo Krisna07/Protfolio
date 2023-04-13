@@ -34,7 +34,7 @@ const About = (mode) => {
         <div className="flex gap-2 items-center">
           <div
             className={`text-base leading-relaxed tracking-wide  gap-2 ${
-              mode ? "text-gray-400" : "text-black"
+              mode.mode ? "text-gray-400" : "text-black"
             }`}
           >
             <p>
