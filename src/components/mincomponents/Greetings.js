@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
+import Typewriter from "typewriter-effect";
 
 const Greetings = (theme) => {
   const heading = useRef(null);
@@ -7,55 +8,85 @@ const Greetings = (theme) => {
   const headChange = useRef(null);
   const [head, setHead] = useState("Krishna Paudel");
 
-  useEffect(() => {
-    const elHeading = heading.current;
-    const elShort = shortDesc.current;
+  // useEffect(() => {
+  //   const nameArray = name.split("");
+  //   let i = 0;
+  //   let interval = null;
 
-    gsap.fromTo(
-      elHeading,
-      { translateY: 10, opacity: 0 },
-      { translateY: 0, opacity: 4, duration: 1 }
-    );
-    gsap.fromTo(
-      elShort,
-      { translateY: 10, opacity: 0 },
-      { translateY: 0, opacity: 1, duration: 1 }
-    );
-  });
+  //   if (letters.length == nameArray.length) {
+  //     interval = setInterval(() => {
+  //       setLetters((prevLetters) => [...prevLetters, nameArray[i]]);
+  //       i++;
+  //       if (i === nameArray.length) {
+  //         clearInterval(interval);
+  //       }
+  //     }, 1000);
+  //   } else if (letters.length > 0) {
+  //     interval = setInterval(() => {
+  //       setLetters((letters) => {
+  //         const newLetters = [...letters];
+  //         newLetters.shift();
+  //         if (newLetters.length === 0) {
+  //           clearInterval(interval);
+  //         }
+  //         return newLetters;
+  //       });
+  //     }, 1000);
+  //   }
+
+  //   return () => clearInterval(interval);
+  // }, [name, letters]);
+
+  // console.log(letters);
+  // useEffect(() => {
+  //   const elHeading = heading.current;
+  //   const elShort = shortDesc.current;
+
+  //   gsap.fromTo(
+  //     elHeading,
+  //     { translateY: 10, opacity: 0 },
+  //     { translateY: 0, opacity: 4, duration: 1 }
+  //   );
+  //   gsap.fromTo(
+  //     elShort,
+  //     { translateY: 10, opacity: 0 },
+  //     { translateY: 0, opacity: 1, duration: 1 }
+  //   );
+  // });
+  // useEffect(() => {
+  //   const elCursor = headChange.current;
+  //   console.log(elCursor.getBoundingClientRect().width);
+  // }, []);
+  const [textOp, setTextOp] = useState(0);
+
   useEffect(() => {
-    const elCursor = headChange.current;
-    console.log(elCursor.getBoundingClientRect().width);
-  }, [10]);
+    const interval = setInterval(
+      () => setTextOp(Math.floor(Math.random() * 10)),
+      300
+    );
+    return () => clearInterval(interval);
+  }, [setTextOp]);
 
   return (
     <div className=" h-full flex flex-col items-start justify-center relative  relative ">
       <div className="z-0 flex flex-col items-center justify-center">
-        <div className="p-4  font-mono text-l w-full overflow-hidden md:text-xl ">
+        <div className="p-4  font-mono text-l w-full overflow-hidden md:text-xl  ">
           <div className="m-2 text-red-400 md:text-4xl" ref={heading}>
             Hi, I am
           </div>
           <br />
-          <div className="relative m-2 flex item-center md:w-[fit-content] w-[22ch] pr-8">
-            <span className=" py-2  font-bold md:text-4xl   md:flex whitespace-nowrap text-brand-accent hidden ">
-              <h1 className="text-l md:text-3xl">{head}👋</h1>
-            </span>
-            <span className=" py-2  font-bold md:text-4xl   whitespace-nowrap text-brand-accent md:hidden">
-              <h1>{"<>Krishna Paudel</>"}</h1>
-            </span>
-            <span
-              className={`cursor ${
-                !theme.theme
-                  ? "bg-white border-black border-l-4 border-solid "
-                  : "bg-black border-white border-l-4 border-solid  "
-              } `}
-              ref={headChange}
-            ></span>
+          <div className="text-3xl flex items-center p-2 font-bold">
+            <Typewriter
+              options={{
+                strings: ["Krishna Paudel", "Web Developer </>"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </div>
         </div>
         <h1
-          className={`p-4 font-mono font-bold text-l text-gray-500 ${
-            theme.theme ? "hover:text-gray-100" : "hover:text-gray-900"
-          } md:text-xl w-full overflow-hidden`}
+          className={`p-4 font-mono font-bold text-l opacity-[0.5] hover:opacity-[1] transition ease-in-out delay-150 md:text-xl w-full overflow-hidden`}
         >
           I build things for the web.
         </h1>

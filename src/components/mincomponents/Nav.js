@@ -19,10 +19,10 @@ const Nav = ({ mode, offsetY }) => {
   return (
     <>
       <nav
-        className={`md:w-full text-right flex items-center   m-auto absoulte top-0 `}
+        className={`md:w-full text-right flex items-center absoulte top-0 gap-4 bg-red-200`}
       >
-        <div className="w-full md:flex items-center  justify-between   hidden list-none  ">
-          <div className="w-3/4 md:flex items-center justify-center   hidden list-none ">
+        <div className="w-full md:flex grid items-center  justify-between  gap-2   list-none bg-red-500  ">
+          <div className="md:w-3/4 w-full flex items-center justify-center bg-red-300   list-none font-bold ">
             {tabs.map((tab, count) => (
               <Link
                 smooth={true}
@@ -33,9 +33,9 @@ const Nav = ({ mode, offsetY }) => {
                 offset={-50}
               >
                 <div
-                  className={`px-2 w-content relative flex flex-col items-center justify-center  text-[16px] mx-2 `}
+                  className={`px-2 w-content relative flex flex-col items-center justify-center  text-[16px] mx-2 box-border border-b-[1px] border-none hover:border-red-500`}
                 >
-                  <span className="hover:border-b-[1px] border-red-500 p-2 flex items-center justify-center">
+                  <span className=" p-2 flex items-center justify-center box-border">
                     <span className="text-red-400 mr-2 ">0.{count + 1}</span>
                     {tab}
                   </span>
@@ -51,14 +51,6 @@ const Nav = ({ mode, offsetY }) => {
               Resume
             </button>
           </div>
-        </div>
-        <div className="w-8  items-end md:hidden block ">
-          <MobileNav
-            menuHover={menuHover}
-            theme={mode}
-            tabs={tabs}
-            saveFile={saveFile}
-          />
         </div>
       </nav>
       <Link
