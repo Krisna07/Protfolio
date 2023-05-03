@@ -90,7 +90,7 @@ const Projects = ({ theme }) => {
                     >
                       <div
                         className={`w-full  md:text-auto flex  justify-${
-                          count % 2 == 0 ? "start" : "end"
+                          count % 2 === 0 ? "start" : "end"
                         } `}
                       >
                         <div

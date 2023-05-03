@@ -1,71 +1,30 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import Typewriter from "typewriter-effect";
 
 const Greetings = (theme) => {
   const heading = useRef(null);
   const shortDesc = useRef(null);
-  const headChange = useRef(null);
-  const [head, setHead] = useState("Krishna Paudel");
-
-  // useEffect(() => {
-  //   const nameArray = name.split("");
-  //   let i = 0;
-  //   let interval = null;
-
-  //   if (letters.length == nameArray.length) {
-  //     interval = setInterval(() => {
-  //       setLetters((prevLetters) => [...prevLetters, nameArray[i]]);
-  //       i++;
-  //       if (i === nameArray.length) {
-  //         clearInterval(interval);
-  //       }
-  //     }, 1000);
-  //   } else if (letters.length > 0) {
-  //     interval = setInterval(() => {
-  //       setLetters((letters) => {
-  //         const newLetters = [...letters];
-  //         newLetters.shift();
-  //         if (newLetters.length === 0) {
-  //           clearInterval(interval);
-  //         }
-  //         return newLetters;
-  //       });
-  //     }, 1000);
-  //   }
-
-  //   return () => clearInterval(interval);
-  // }, [name, letters]);
-
-  // console.log(letters);
-  // useEffect(() => {
-  //   const elHeading = heading.current;
-  //   const elShort = shortDesc.current;
-
-  //   gsap.fromTo(
-  //     elHeading,
-  //     { translateY: 10, opacity: 0 },
-  //     { translateY: 0, opacity: 4, duration: 1 }
-  //   );
-  //   gsap.fromTo(
-  //     elShort,
-  //     { translateY: 10, opacity: 0 },
-  //     { translateY: 0, opacity: 1, duration: 1 }
-  //   );
-  // });
-  // useEffect(() => {
-  //   const elCursor = headChange.current;
-  //   console.log(elCursor.getBoundingClientRect().width);
-  // }, []);
-  const [textOp, setTextOp] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(
-      () => setTextOp(Math.floor(Math.random() * 10)),
-      300
+    const headingLetters = heading.current.children;
+    const desLetters = shortDesc.current.children;
+    gsap.set(headingLetters, { autoAlpha: 0 });
+    gsap.set(desLetters, { autoAlpha: 0 });
+
+    const tl = gsap.timeline({ defaults: { ease: "power3.inOut" } });
+
+    tl.fromTo(
+      headingLetters,
+      { y: "+=50" },
+      { autoAlpha: 1, y: "0", stagger: 0.1, duration: 2 }
     );
-    return () => clearInterval(interval);
-  }, [setTextOp]);
+    tl.fromTo(
+      desLetters,
+      { y: "+=50" },
+      { autoAlpha: 1, y: "0", stagger: 0.1, duration: 0.5 }
+    );
+  }, []);
 
   return (
     <div className=" h-full flex flex-col items-start justify-center relative  relative ">

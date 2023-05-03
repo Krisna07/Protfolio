@@ -3,13 +3,12 @@ import Contact from "./components/mincomponents/Contact";
 import Greetings from "./components/mincomponents/Greetings";
 import Nav from "./components/mincomponents/Nav";
 import Projects from "./components/mincomponents/Projects";
-import { FaSun, FaMoon, FaArrowUp } from "react-icons/fa";
+import { FaSun, FaMoon } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import SideItems from "./components/mincomponents/SideItems";
 import Skills from "./components/mincomponents/Skills";
 import { saveAs } from "file-saver";
 import resume from "./components/files/Resume.pdf";
-import { Link } from "react-scroll";
 
 function App() {
   const [offsetY, setOffsetY] = useState(0);

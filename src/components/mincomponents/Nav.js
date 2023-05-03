@@ -1,14 +1,11 @@
 import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
-import { FaArrowUp } from "react-icons/fa";
-
-import MobileNav from "./MobileNav";
+import { Link } from "react-scroll";
 
 const Nav = ({ mode, offsetY, saveFile }) => {
   const tabs = ["About", "Projects", "Contact"];
 
-  const menuHover =
-    "hover:after:content-[''] after:w-0 hover:after:w-full hover:after:h-px hover:after:bg-red-300 hover-after-absolute hover:after:left-0 after:px-2 after:absolute after:bottom-0 text-sm font-medium hover:text-gray-500   ";
+  // const menuHover =
+  //   "hover:after:content-[''] after:w-0 hover:after:w-full hover:after:h-px hover:after:bg-red-300 hover-after-absolute hover:after:left-0 after:px-2 after:absolute after:bottom-0 text-sm font-medium hover:text-gray-500   ";
   return (
     <>
       <nav
