@@ -90,17 +90,15 @@ const Projects = ({ theme }) => {
                     >
                       <div
                         className={`w-full  md:text-auto flex  justify-${
-                          count % 2 === 0 ? "start" : "end"
+                          count % 2 == 0 ? "start" : "end"
                         } `}
                       >
                         <div
-                          className={`md:w-4/5 w-full flex items-center gap-2 flex-wrap justify-${
-                            count % 2 === 0 ? "start" : "end"
-                          }
+                          className={`md:w-4/5 w-full flex items-center gap-2 flex-wrap 
                           `}
                         >
                           {project.createdon.split(" ").map((items) => (
-                            <span className="py-1 px-2 bg-red-400 rounded hover:text-black">
+                            <span className="py-[1px] px-2 bg-red-400 rounded hover:text-black">
                               {items}
                             </span>
                           ))}

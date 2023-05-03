@@ -25,6 +25,23 @@ function App() {
   const saveFile = () => {
     saveAs(resume, "Krishna_Paudel_resume.pdf");
   };
+  const [isScrolledDown, setIsScrolledDown] = useState(true);
+  const [prevScrollY, setPrevScrollY] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > prevScrollY) {
+        setIsScrolledDown(true);
+      } else {
+        setIsScrolledDown(false);
+      }
+      setPrevScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollY]);
 
   return (
     <div
@@ -33,19 +50,43 @@ function App() {
       } w-full md:flex flex-col items-center relative `}
     >
       <div
-        className={`w-full h-10 flex items-center justify-between appshadow py-8  md:text-base text-xs   bg-${
+        className={`w-full  md:flex grid place-items-center  gap-4 items-center justify-between appshadow py-2  md:text-base text-xs px-4  bg-${
           !light ? "white" : "black"
         } } fixed top-0 z-[999]`}
       >
-        <div className=" px-4 text-[20px]">
+        <div className="text-[20px]">
           {light ? (
             <FaSun onClick={() => setLight(!light)} />
           ) : (
             <FaMoon onClick={() => setLight(!light)} />
           )}
         </div>
-        <div className="md:w-3/4 lg:w-2/6 flex items-center justify-center px-4   ">
+        <div className="flex items-center justify-center">
           <Nav mode={light} offsetY={offsetY} />
+        </div>
+        <div
+          className={`${
+            !isScrolledDown ? "h-10" : "h-0"
+          }  md:hidden overflow-hidden transition-all ease-in-out`}
+        >
+          <button
+            className={`text-bold bg-red-500 px-2 py-1  rounded ${
+              !isScrolledDown ? "opacity-1" : "opacity-0 md:opacity-1"
+            }`}
+            onClick={saveFile}
+          >
+            Resume
+          </button>
+        </div>
+        <div
+          className={`  md:flex hidden overflow-hidden transition-all ease-in-out`}
+        >
+          <button
+            className={`text-bold bg-red-500 px-2 py-1  rounded `}
+            onClick={saveFile}
+          >
+            Resume
+          </button>
         </div>
       </div>
       <div className=" pt-[10vh]  items-center justify-center flex flex-col  z-10 overflow-y ">
