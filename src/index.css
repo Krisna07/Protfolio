@@ -1,11 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&family=Noto+Serif&family=Odibee+Sans&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Noto+Serif&family=Odibee+Sans&family=Roboto:wght@300&display=swap");
 
 body {
   margin: 0 auto;
   padding: 0%;
+  font-family: Archivo;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,8 +38,6 @@ code {
   top: 10%;
   right: 0;
   animation: type 4s ease-out 0.8s infinite alternate both;
-
-  /* will-change: opacity; */
 }
 .appshadow {
   border-bottom: 1px solid rgba(143, 143, 143, 0.295);
@@ -147,38 +146,20 @@ code {
   }
 }
 
-.timeline:hover {
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding: 20px;
-
-  text-align: center;
+.resumeBtn::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  /* background: rgb(141, 125, 125); */
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  z-index: -1;
+  border-radius: 2px;
+  border: 1px solid red;
+  transition: all ease-in-out 200ms;
 }
-
-.timeline:hover .date {
-  border-right: none !important;
-  border-bottom: 1px solid red;
-  animation: rotateDate 3s forwards;
-}
-@keyframes rotateDate {
-  0% {
-    left: -200px;
-    top: 100px;
-  }
-
-  20% {
-    left: -200px;
-    top: 0;
-  }
-  40% {
-    left: 0;
-  }
-  60% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(0);
-  }
+.resumeBtn:hover::after {
+  top: -4px;
+  right: -4px;
 }

@@ -5,6 +5,11 @@ import { Link } from "react-scroll";
 const MobileNav = ({ menuHover, theme, tabs, saveFile }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
+  // {
+  //   openMenu
+  //     ? window.addEventListener("scroll", { passive: true })
+  //     : window.addEventListener("scroll", { passive: false });
+  // }
   const rotateTopBar = "transform rotate-[-135deg] absolute";
   const middleBar =
     "transform translate-x-40 transition-all  ease-in duration-900";
@@ -73,15 +78,6 @@ const MobileNav = ({ menuHover, theme, tabs, saveFile }) => {
               </Link>
             </div>
           ))}
-
-          <li
-            className={` mx-4  w-content font-bold text-sm relative `}
-            onClick={saveFile}
-          >
-            <button className="p-1 border-2  flex items-center justify-center border-red-500 border-solid rounded hover:text-red-400">
-              Resume
-            </button>
-          </li>
         </div>
       </div>
     </nav>
