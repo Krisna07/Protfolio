@@ -49,7 +49,7 @@ function App() {
       } w-full md:flex flex-col items-center relative `}
     >
       <div
-        className={`w-full  md:flex grid place-items-center  gap-4 items-center justify-between appshadow py-2  md:text-base text-xs px-4  bg-${
+        className={`w-full  md:flex grid place-items-center   gap-4 items-center justify-center md:justify-between appshadow py-2  md:text-base text-xs md:px-4  bg-${
           !light ? "white" : "black"
         } } fixed top-0 z-[999]`}
       >
@@ -60,7 +60,7 @@ function App() {
             <FaMoon onClick={() => setLight(!light)} />
           )}
         </div>
-        <div className="flex items-center justify-center">
+        <div className=" flex items-center justify-center ">
           <Nav mode={light} offsetY={offsetY} />
         </div>
         <div
