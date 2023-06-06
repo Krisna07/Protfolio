@@ -69,7 +69,7 @@ function App() {
           }  md:hidden overflow-hidden transition-all ease-in-out`}
         >
           <button
-            className={`text-bold bg-red-500 px-2 py-1  rounded ${
+            className={`text-bold bg-red-500 px-2 py-1  rounded  ${
               !isScrolledDown ? "opacity-1" : "opacity-0 md:opacity-1"
             }`}
             onClick={saveFile}
