@@ -16,7 +16,8 @@ const Projects = ({ theme }) => {
       createdon: "JavaScript Reactjs HTML5 CSS Express Node Responsive",
       link: " https://github.com/Krisna07/CriminalFaceRecognition_Repo",
       webLink: "",
-    },  {
+    }, 
+    {
       projectType: "Landing page",
       name: "The Linkify",
       desc: "This is a landing page website created using NextJS, Taildwind CSS and Typescript. The hastle of sharing link is done for. Link sharing never been so easy !!  ",
@@ -27,7 +28,7 @@ const Projects = ({ theme }) => {
     },
     {
       projectType: "Practise Project",
-      name: "Stripe Cl
+      name: "Stripe Clone",
       desc: "This clone website was created using HTML, CSS and Reactjs. All the components are custom made thanks to react and css.",
       createdon: "JavaScript HTML5 CSS React keyframes",
       image: rsImage,
