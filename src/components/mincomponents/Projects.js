@@ -2,10 +2,8 @@ import React from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
 import todoImage from "../images/todoapp.jpg";
 import rsImage from "../images/stripeclone.jpg";
-import lfImage from "../images/stripeclone.jpg";
-
+import lfImage from "../images/file.png";
 import Subheadings from "./Subheadings";
-
 import dsImage from "../images/383AD106-DEB6-4B52-AF12-C3FDF1EE174A.jpeg";
 
 const Projects = ({ theme }) => {
@@ -21,7 +19,7 @@ const Projects = ({ theme }) => {
     },  {
       projectType: "Landing page",
       name: "The Linkify",
-      desc: "This is a landing page website created using NextJS, Taildwind CSS and Typescript. This ",
+      desc: "This is a landing page website created using NextJS, Taildwind CSS and Typescript. The hastle of sharing link is done for. Link sharing never been so easy !!  ",
       createdon: "NextJS, TailwindCSS, Typescript",
       image: lfImage,
       link: "https://github.com/Krisna07/thelinkify",
@@ -29,7 +27,7 @@ const Projects = ({ theme }) => {
     },
     {
       projectType: "Practise Project",
-      name: "Stripe Clone",
+      name: "Stripe Cl
       desc: "This clone website was created using HTML, CSS and Reactjs. All the components are custom made thanks to react and css.",
       createdon: "JavaScript HTML5 CSS React keyframes",
       image: rsImage,
