@@ -2,6 +2,8 @@ import React from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
 import todoImage from "../images/todoapp.jpg";
 import rsImage from "../images/stripeclone.jpg";
+import lfImage from "../images/stripeclone.jpg";
+
 import Subheadings from "./Subheadings";
 
 import dsImage from "../images/383AD106-DEB6-4B52-AF12-C3FDF1EE174A.jpeg";
@@ -10,13 +12,20 @@ const Projects = ({ theme }) => {
   const projects = [
     {
       projectType: "Practise Project",
-
       name: "Complex Todo App",
       desc: "This is a complete web app created using Reactjs. The app enables user to create task and set reminder for it. ",
       image: todoImage,
       createdon: "JavaScript Reactjs HTML5 CSS Express Node Responsive",
       link: " https://github.com/Krisna07/CriminalFaceRecognition_Repo",
       webLink: "",
+    },  {
+      projectType: "Landing page",
+      name: "The Linkify",
+      desc: "This is a landing page website created using NextJS, Taildwind CSS and Typescript. This ",
+      createdon: "NextJS, TailwindCSS, Typescript",
+      image: lfImage,
+      link: "https://github.com/Krisna07/thelinkify",
+      webLink: "https://thelinkify.vercel.app/",
     },
     {
       projectType: "Practise Project",
@@ -25,7 +34,7 @@ const Projects = ({ theme }) => {
       createdon: "JavaScript HTML5 CSS React keyframes",
       image: rsImage,
       link: "https://github.com/Krisna07/StripeClone",
-      webLink: "https://stripe-cloneapp.vercel. ",
+      webLink: "https://stripe-cloneapp.vercel.app",
     },
     {
       projectType: "Frontend Mentor Challenge",
