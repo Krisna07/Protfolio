@@ -5,7 +5,7 @@ const Skills = (mode) => {
     {
       title: "Langauge",
       item: "JavaScript",
-      des: "Create interactive and responsive user interfaces using modern frameworks like React, Vue, or Angular.<br> Build and consume APIs to fetch and manipulate data from servers using libraries like Axios or Fetch       Create and manage dynamic web pages with DOM manipulation and event handling.<br> Implement client-side validation and form handling for user input using JavaScript libraries like Formik or Yup.<br>Debug and troubleshoot JavaScript errors using browser development tools like Chrome DevTools or Firefox Developer Tools.",
+      des: "Create interactive and responsive user interfaces using modern frameworks like React, Vue, or Angular.<br> Build and consume APIs to fetch and manipulate data from servers using libraries like Axios or Fetch Create and manage dynamic web pages with DOM manipulation and event handling.<br> Implement client-side validation and form handling for user input using JavaScript libraries like Formik or Yup.<br>Debug and troubleshoot JavaScript errors using browser development tools like Chrome DevTools or Firefox Developer Tools.",
     },
     {
       title: "Framework",
@@ -22,9 +22,9 @@ const Skills = (mode) => {
   ];
 
   return (
-    <div className="md:w-full md:text-sm px-2  ">
-      <div className="flex items-center space-between my-4 text-3xl text-bold font-bold">
-        <div className=" w-[fit-content]">Skillset</div>
+    <div className="w-full md:text-sm px-2  ">
+      <div className="w-full flex items-center space-between my-4 text-3xl text-bold font-bold">
+        <div className=" ">Skillset</div>
         <span className="w-full h-px bg-gray-400 ml-4"></span>
       </div>
       <div className="flex items-center content-center gap-2">
@@ -35,8 +35,7 @@ const Skills = (mode) => {
                 key={skill.title}
                 className={` bg-${
                   mode.mode ? "gray-900" : "gray-100"
-                }  rounded flex flex-col p-4  items-center w-full gap-2  `}
-              >
+                }  rounded flex flex-col p-4  items-center w-full gap-2  `}>
                 <div className="flex w-full text-gray-500  text-[20px]">
                   {skill.title}
                 </div>
