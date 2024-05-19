@@ -9,15 +9,37 @@ const Skills = (mode) => {
     },
     {
       title: "Framework",
-      item: "React, Rest API, Express, TailwindCSS",
+      item: "NextJS, React, Rest API, Express, Prisma,  TailwindCSS",
+      des: " Build and deploy performant and scalable web applications using Next.js, a popular React framework for server-side rendering and static site generation.<br> Create reusable and maintainable components using React, a JavaScript library for building user interfaces.<br> Design and implement RESTful APIs using Express, a Node.js framework for building web applications.<br> Create and manage databases using Prisma, a powerful ORM for Node.js and TypeScript.<br> Style web pages using Tailwind CSS, a utility-first CSS framework for rapid development.",
     },
     {
-      title: "Other",
-      item: "Git",
+      title: "Tools",
+      item: "Git, GitHub, VS Code, Figma, Postman",
+      des: " Use Git and GitHub for version control and collaboration.<br> Write clean, maintainable, and efficient code using VS Code, a popular code editor.<br> Design and prototype user interfaces using Figma, a collaborative design tool.<br> Test and debug APIs using Postman, a popular API client.",
+    },
+    {
+      title: "Testing",
+      item: "Jest, Cypress",
+      des: "Write unit and integration tests using Jest, a popular JavaScript testing framework.<br> Perform end-to-end testing using Cypress, a tool for testing web applications.",
+    },
+    {
+      title: "Deployment",
+      item: "Vercel, Netlify, Heroku",
+      des: " Deploy web applications to Vercel, a platform for deploying static and server-rendered websites.<br> Deploy web applications to Netlify, a platform for deploying static websites and serverless functions.<br> Deploy web applications to Heroku, a platform for deploying web applications in the cloud.",
+    },
+    {
+      title: "Database",
+      item: "MongoDB, MySQL, PostgreSQL",
+      des: " Design and implement databases using MongoDB, a NoSQL database for storing and managing document-oriented data.<br> Design and implement databases using MySQL, a relational database for storing and managing structured data.<br> Design and implement databases using PostgreSQL, a powerful and versatile relational database.",
+    },
+    {
+      title: "Version Control",
+      item: "Git, GitHub, Bitbucket",
+      des: " Use Git for version control and collaboration.<br> Use GitHub for hosting Git repositories and collaborating with other developers.<br> Use Bitbucket for hosting Git repositories and collaborating with other",
     },
     {
       title: "Learning",
-      item: " TypeScript, GSAP, SCSS",
+      item: " Web3, Solidity, Ethereum",
     },
   ];
 
@@ -35,7 +57,8 @@ const Skills = (mode) => {
                 key={skill.title}
                 className={` bg-${
                   mode.mode ? "gray-900" : "gray-100"
-                }  rounded flex flex-col p-4  items-center w-full gap-2  `}>
+                }  rounded flex flex-col p-4  items-center w-full gap-2  `}
+              >
                 <div className="flex w-full text-gray-500  text-[20px]">
                   {skill.title}
                 </div>

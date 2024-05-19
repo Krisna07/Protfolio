@@ -112,7 +112,7 @@ function App() {
           id="projects"
           className="w-full flex flex-col items-center justify-center appshadow py-16"
         >
-          <div className="md:w-3/4 w-full px-2  2xl:w-3/6 ">
+          <div className="md:w-3/4 w-full p-2 2xl:w-3/6 ">
             <Projects theme={light} />
           </div>
         </section>
