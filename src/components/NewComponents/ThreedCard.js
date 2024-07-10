@@ -5,6 +5,8 @@ const ThreedCard = ({project}) => {
   return (
 
     <div className="three-d-container">
+      
+      <div className="cube">
       <div className=" three-d-text">
           <h2>{project.name}</h2>
           <span className='text-justify'> {project.desc} </span>
@@ -12,8 +14,6 @@ const ThreedCard = ({project}) => {
             <button>Read more</button>
           </div>
         </div>
-      <div className="cube">
-     
         <div className="face top" > </div>
         <div className="face bottom"></div>
         <div className="face front"></div>
