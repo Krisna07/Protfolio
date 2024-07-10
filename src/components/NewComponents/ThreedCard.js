@@ -5,17 +5,16 @@ const ThreedCard = ({project}) => {
   return (
 
     <div className="three-d-container">
-      <div className="cube">
-        <div className="three-d-text">
+      <div className=" three-d-text">
           <h2>{project.name}</h2>
           <span className='text-justify'> {project.desc} </span>
           <div>
-            <button>Buy now</button>
+            <button>Read more</button>
           </div>
         </div>
-        <div className="face top" style={{background:`url(${project.image})`}}>
-         
-        </div>
+      <div className="cube">
+     
+        <div className="face top" > </div>
         <div className="face bottom"></div>
         <div className="face front"></div>
         <div className="face right"></div>

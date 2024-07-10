@@ -50,7 +50,7 @@ const ThreeDProject = () => {
   return (
     <div className='w-full grid gap-4  '>
         <h2 className='uppercase text-[30px] font-bold'>Something I have build</h2>
-        <div className='w-full box-border grid grid-cols-2 gap-16 flex-wrap relative left-[250px] '>
+        <div className='w-full box-border grid grid-cols-2 gap-4 relative'>
             {projects.map((project)=><ThreedCard key={project.name} project={project}/>)}
         </div>
     </div>
