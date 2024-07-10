@@ -1,0 +1,32 @@
+import React from 'react'
+import "./Threedcard.css"
+
+const ThreedCard = ({project}) => {
+  return (
+
+    <div className="three-d-container">
+      <div className="cube">
+        <div className="three-d-text">
+          <h2>{project.name}</h2>
+          <span className='text-justify'> {project.desc} </span>
+          <div>
+            <button>Buy now</button>
+          </div>
+        </div>
+        <div className="face top" style={{background:`url(${project.image})`}}>
+         
+        </div>
+        <div className="face bottom"></div>
+        <div className="face front"></div>
+        <div className="face right"></div>
+        <div className="face left"></div>
+        <div className="face back"></div>
+      </div>
+    </div>
+  );
+};
+
+
+
+
+export default ThreedCard

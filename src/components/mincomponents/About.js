@@ -31,13 +31,14 @@ const About = (mode) => {
           <span>About</span>
           <span className="w-full h-px bg-gray-400 ml-4"></span>
         </div>
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center preventSelect">
           <div
-            className={`text-base leading-relaxed tracking-wide  gap-2 ${
+
+            className={`text-base leading-relaxed text-justify tracking-wide  gap-2 ${
               mode.mode ? "text-gray-400" : "text-black"
             }`}
           >
-            <p>
+            <p className="preventSelect">
               Back in 2020 I started learning web development with JavaScript as
               my main langauge. While learning JavaScript I came to know about
               React and started experimenting. As I learnt more, I fell in love
@@ -71,9 +72,9 @@ const About = (mode) => {
               </a>
             </div>
           </div>
-          <div className="min-w-[200px] h-[200px] border-2 rounded border-green-600 bg-green-300 opacity-[0.7] relative z-20 hidden md:block">
+          {/* <div className="min-w-[200px] h-[200px] border-2 rounded border-green-600 bg-green-300 opacity-[0.7] relative z-20 hidden md:block">
             <div className="absolute top-2 left-2 min-w-[200px] h-[200px] border-2 rounded border-green-600  z-[-1] transition-all hover:top-4 hover:left-4"></div>
-          </div>
+          </div> */}
         </div>
       </div>
       <Timeline className="w-full" theme={mode.mode} />

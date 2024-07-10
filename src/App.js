@@ -9,6 +9,7 @@ import SideItems from "./components/mincomponents/SideItems";
 import Skills from "./components/mincomponents/Skills";
 import { saveAs } from "file-saver";
 import resume from "./components/files/Resume.pdf";
+import ThreeDProject from "./components/NewComponents/ThreeDProject";
 
 function App() {
   const [offsetY, setOffsetY] = useState(0);
@@ -113,7 +114,8 @@ function App() {
           className="w-full flex flex-col items-center justify-center appshadow py-16"
         >
           <div className="md:w-3/4 w-full p-2 2xl:w-3/6 ">
-            <Projects theme={light} />
+            {/* <Projects theme={light} /> */}
+            <ThreeDProject/>
           </div>
         </section>
 
