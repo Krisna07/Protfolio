@@ -14,7 +14,7 @@ const ThreedCard = ({project}) => {
             <button>Read more</button>
           </div>
         </div>
-        <div className="face top" > </div>
+        <div className="face top" style={{background:`url(${project.image})`}}> </div>
         <div className="face bottom"></div>
         <div className="face front"></div>
         <div className="face right"></div>

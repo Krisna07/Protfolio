@@ -44,7 +44,7 @@
     font-size: 20px;
     text-align: left;
    position:absolute;
-   transform: translate3d(0px, 0px, 20px) rotateX(0deg) rotateY(90deg)
+   transform: translate3d(20px, 50px, 100px) rotateX(-10deg) rotateY(90deg)
    rotateZ(-90deg) ;
     transition: all ease-in-out 1s;
     display: grid;
@@ -66,9 +66,10 @@
     & .three-d-text {
       min-width: fit-content;
       scale: 1.2;
-      transform: translate3d(200px, 20px, 0px) rotateX(-45deg) rotateY(0deg)
+      transform: translate3d(0px, -100px, 100px) rotateX(0deg) rotateY(20deg)
         rotateZ(-90deg);
       text-align: left;
+      background-color: gray;
     }
   }
 
@@ -89,6 +90,7 @@
   .top {
     opacity: 1;
     rotate: -90deg;
+    
   }
   .bottom {
     transform: translateZ(-20px) translateY(0);
