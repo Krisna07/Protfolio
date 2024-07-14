@@ -16,43 +16,36 @@ const MobileNav = ({ menuHover, theme, tabs, saveFile }) => {
     >
       <div className=" relative flex items-center">
         <div
-          className={` w-8 flex flex-col  top-0 right-0  items-center text-red-500 overflow-hidden ${
-            openMenu ? "justify-center" : "justify-between"
-          }`}
+          className={` w-8 flex flex-col  top-0 right-0  items-center text-red-500 overflow-hidden ${openMenu ? "justify-center" : "justify-between"
+            }`}
           onClick={() => setOpenMenu(!openMenu)}
         >
           <span
-            className={`w-full h-1  bg-red-500 transition ease-in-out duration-700  ${
-              openMenu ? rotateTopBar : ""
-            }`}
+            className={`w-full h-1  bg-red-500 transition ease-in-out duration-700  ${openMenu ? rotateTopBar : ""
+              }`}
           ></span>
           <span
-            className={`w-full h-1 my-2 bg-red-500 transition ease-in-out duration-[1000ms]  ${
-              openMenu ? middleBar : ""
-            }`}
+            className={`w-full h-1 my-2 bg-red-500 transition ease-in-out duration-[1000ms]  ${openMenu ? middleBar : ""
+              }`}
           ></span>
           <span
-            className={`w-full h-1  bg-red-500 transition ease-in-out duration-700  ${
-              openMenu ? rotatelastBar : ""
-            }`}
+            className={`w-full h-1  bg-red-500 transition ease-in-out duration-700  ${openMenu ? rotatelastBar : ""
+              }`}
           ></span>
         </div>
       </div>
 
       <div
         className={` transition-right ease-in duration-300 
-           fixed top-14 z-40  ${
-             openMenu
-               ? "w-screen h-screen  right-[0] backdrop-filter backdrop-blur-sm"
-               : "  right-[-100%]"
-           }`}
+           fixed top-14 z-40  ${openMenu
+            ? "w-screen h-screen  right-[0] backdrop-filter backdrop-blur-sm"
+            : "  right-[-100%]"
+          }`}
       >
         <div
-          className={`overflow-hidden h-screen top-0  z-50 fixed  ${
-            openMenu ? "w-3/4 right-0 " : "w-3/4 right-[-100%] "
-          } ${
-            !theme ? "bg-gray-300 text-black" : "bg-gray-800 text-white"
-          } flex flex-col p-20 items-center justify-between  list-none`}
+          className={`overflow-hidden h-screen top-0  z-50 fixed  ${openMenu ? "w-3/4 right-0 " : "w-3/4 right-[-100%] "
+            } ${!theme ? "bg-gray-300 text-black" : "bg-gray-800 text-white"
+            } flex flex-col p-20 items-center justify-between  list-none`}
         >
           {tabs.map((tab, count) => (
             <div
