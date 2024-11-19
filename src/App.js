@@ -188,7 +188,7 @@ function App() {
         >
           <div className="md:w-3/4 w-full p-2 2xl:w-3/6 ">
             <Projects theme={light} />
-            {/* <ThreeDProject/> */}
+            {/* <ThreeDProject /> */}
           </div>
         </section>
 
